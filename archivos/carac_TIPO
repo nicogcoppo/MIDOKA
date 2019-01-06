@@ -1,0 +1,3 @@
+(tcID INT NOT NULL PRIMARY KEY, 
+tc_tc VARCHAR(30) NOT NULL,
+notas_tc DOUBLE)

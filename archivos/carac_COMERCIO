@@ -1,0 +1,3 @@
+(coID INT NOT NULL PRIMARY KEY, 
+co_co VARCHAR(30) NOT NULL,
+notas_co DOUBLE)

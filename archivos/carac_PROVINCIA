@@ -1,0 +1,4 @@
+(prID INT NOT NULL PRIMARY KEY, 
+letra_pr VARCHAR(3) NOT NULL,
+pr_pr VARCHAR(100),
+notas_pr DOUBLE)

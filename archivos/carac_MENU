@@ -1,0 +1,46 @@
+(mID INT NOT NULL PRIMARY KEY, 
+nombre_m INT NOT NULL,
+ubicacion_m INT NOT NULL,
+proxubi_m INT NOT NULL,
+cont_m INT NOT NULL,
+para1_m INT,
+para2_m INT,
+para3_m INT,
+para4_m VARCHAR(60),
+para5_m VARCHAR(60),
+para6_m VARCHAR(60),
+para7_m VARCHAR(60),
+			  CONSTRAINT `PROXIMA_UBICACION`
+					FOREIGN KEY (proxubi_m) REFERENCES UBICACIONES (ubID)
+						    ON DELETE CASCADE
+						       	      ON UPDATE RESTRICT,
+			  CONSTRAINT `CONTIENE_SCRIPT`
+					FOREIGN KEY (cont_m) REFERENCES SCRIPTS (scID)
+						    ON DELETE CASCADE
+						       	      ON UPDATE RESTRICT,
+			  CONSTRAINT `NOMBRE_MENU`
+					FOREIGN KEY (nombre_m) REFERENCES NOMBRE_MENU (nmID)
+						    ON DELETE CASCADE
+						       	      ON UPDATE RESTRICT,
+			  CONSTRAINT `UBICACION_MENU`
+					FOREIGN KEY (ubicacion_m) REFERENCES UBICACIONES (ubID)
+						    ON DELETE CASCADE
+						       	      ON UPDATE RESTRICT,
+			  CONSTRAINT `FONDO`
+					FOREIGN KEY (para1_m) REFERENCES NOMBRE_MENU (nmID)
+						    ON DELETE CASCADE
+						       	      ON UPDATE RESTRICT,
+			  CONSTRAINT `TITULO`
+					FOREIGN KEY (para2_m) REFERENCES NOMBRE_MENU (nmID)
+						    ON DELETE CASCADE
+						       	      ON UPDATE RESTRICT,
+			  CONSTRAINT `SUB-TITULO`
+					FOREIGN KEY (para3_m) REFERENCES NOMBRE_MENU (nmID)
+						    ON DELETE CASCADE
+						       	      ON UPDATE RESTRICT							     
+							      
+							      ) ENGINE = InnoDB;
+		
+
+
+

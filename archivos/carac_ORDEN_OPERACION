@@ -1,0 +1,20 @@
+(oopID INT NOT NULL PRIMARY KEY, 
+tipo_oop VARCHAR(100),
+demora_oop DOUBLE,
+tipo_recurso_oop INT NOT NULL,
+xdefecto_oop INT,
+notas_oop DOUBLE,
+			  CONSTRAINT `RECURSO X DEFECTO`
+					FOREIGN KEY (xdefecto_oop) REFERENCES RECURSOS_HUMANOS_DISPONIBLES (rhdID)
+						    ON DELETE CASCADE
+						       	      ON UPDATE RESTRICT,
+			  CONSTRAINT `TIPO RECURSO HUMANO`
+					FOREIGN KEY (tipo_recurso_oop) REFERENCES RECURSOS_HUMANOS (rhID)
+						    ON DELETE CASCADE
+						       	      ON UPDATE RESTRICT				     
+							      
+							      ) ENGINE = InnoDB;
+		
+
+
+

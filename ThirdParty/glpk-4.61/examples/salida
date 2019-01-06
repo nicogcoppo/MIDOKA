@@ -1,0 +1,73 @@
+Problem:    ALLOY
+Rows:       21
+Columns:    20
+Non-zeros:  183
+Status:     OPTIMAL
+Objective:  COST = 2149.247891 (MINimum)
+
+   No.   Row name   St   Activity     Lower bound   Upper bound    Marginal
+------ ------------ -- ------------- ------------- ------------- -------------
+     1 ZN           B            590           555               
+     2 ZX           NU           590                         590   -0.00647519 
+     3 CN           NL           140           140                   0.0838486 
+     4 CX           B            140                         190 
+     5 MN           NL           245           245                    0.153849 
+     6 MX           B            245                         275 
+     7 CHN          NL            19            19                     1.46162 
+     8 CHX          B             19                          22 
+     9 BN           NL             2             2                     56.2308 
+    10 BX           B              2                           4 
+    11 IX           NU            15                          15      -2.59868 
+    12 SX           NU            10                          10      -25.7711 
+    13 MGX          NU             3                           3     -0.472983 
+    14 NX           B              0                           2 
+    15 TX           B        1.12783                           2 
+    16 LX           B       0.770304                           2 
+    17 TNX          B       0.770304                           2 
+    18 BIX          B              0                           8 
+    19 GX           B        0.68702                           8 
+    20 SCX          B              0                         900 
+    21 FL           NL         10000         10000                    0.226151 
+
+   No. Column name  St   Activity     Lower bound   Upper bound    Marginal
+------ ------------ -- ------------- ------------- ------------- -------------
+     1 A1           NL             0             0                   0.0677736 
+     2 A2           NL             0             0                   0.0508704 
+     3 A3           NL             0             0                   0.0447469 
+     4 A4           NL             0             0                   0.0415305 
+     5 C            B        66.5613             0               
+     6 M            B        19.9586             0               
+     7 B/A          B        33.3333             0               
+     8 Z            B        404.793             0               
+     9 C/A          B        111.724             0               
+    10 SC1          NL             0             0                    0.249601 
+    11 SC2          NL             0             0                    0.250156 
+    12 SC3          NL             0             0                      0.0141 
+    13 SC4          B        2476.08             0               
+    14 SC5          NL             0             0                   0.0151455 
+    15 SC6          NL             0             0                  0.00158103 
+    16 SC7          NL             0             0                   0.0206248 
+    17 SC8          B        274.808             0               
+    18 SC9          NL             0             0                    0.147033 
+    19 SC10         B        5704.37             0               
+    20 SC11         B        908.374             0               
+
+Karush-Kuhn-Tucker optimality conditions:
+
+KKT.PE: max.abs.err = 2.84e-14 on row 3
+        max.rel.err = 1.27e-16 on row 13
+        High quality
+
+KKT.PB: max.abs.err = 0.00e+00 on row 0
+        max.rel.err = 0.00e+00 on row 0
+        High quality
+
+KKT.DE: max.abs.err = 5.55e-16 on column 9
+        max.rel.err = 3.60e-16 on column 9
+        High quality
+
+KKT.DB: max.abs.err = 0.00e+00 on row 0
+        max.rel.err = 0.00e+00 on row 0
+        High quality
+
+End of output

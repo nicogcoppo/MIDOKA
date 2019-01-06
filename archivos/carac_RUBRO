@@ -1,0 +1,5 @@
+(ruID INT NOT NULL AUTO_INCREMENT, 
+rubro_rb VARCHAR(100) NOT NULL,
+nota_ru INT,
+PRIMARY KEY (ruID),
+UNIQUE index_rubro (rubro_rb)) ENGINE = InnoDB;

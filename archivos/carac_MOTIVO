@@ -1,0 +1,11 @@
+(mtID INT NOT NULL AUTO_INCREMENT, 
+motivo_mt VARCHAR(100) NOT NULL,
+modelo_mt INT NOT NULL,
+PRIMARY KEY (mtID),
+UNIQUE index_motivo (motivo_mt,modelo_mt), 
+			  CONSTRAINT `MODELO DEL MOTIVO`
+					FOREIGN KEY (modelo_mt) REFERENCES MODELO (mdID)
+						    ON DELETE CASCADE
+						       	      ON UPDATE RESTRICT							     
+							      
+							      ) ENGINE = InnoDB;

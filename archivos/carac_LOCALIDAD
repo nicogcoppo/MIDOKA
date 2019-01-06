@@ -1,0 +1,4 @@
+(lcID INT NOT NULL PRIMARY KEY, 
+cp_lc INT NOT NULL,
+letra_lc VARCHAR(3) NOT NULL,
+estaf_lc VARCHAR(200))

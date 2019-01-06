@@ -1,0 +1,6 @@
+(cdID INT NOT NULL PRIMARY KEY, 
+cond_cd VARCHAR(50),
+cond_num_cd DOUBLE,
+moratoria_cd INT NOT NULL,
+cond_num_fact INT,
+notas_cd DOUBLE)

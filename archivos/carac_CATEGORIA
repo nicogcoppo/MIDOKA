@@ -1,0 +1,11 @@
+(claID INT NOT NULL AUTO_INCREMENT, 
+clasificacion_cla VARCHAR(90) NOT NULL,
+rubro_cat INT NOT NULL,
+PRIMARY KEY (claID),
+UNIQUE index_categoria (clasificacion_cla,rubro_cat),
+			  CONSTRAINT `RUBRO DE LA CATEGORIA`
+					FOREIGN KEY (rubro_cat) REFERENCES RUBRO (ruID)
+						    ON DELETE CASCADE
+						       	      ON UPDATE RESTRICT							     
+							      
+							      ) ENGINE = InnoDB;

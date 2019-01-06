@@ -1,0 +1,4 @@
+(nmID INT NOT NULL PRIMARY KEY, 
+nombre_nm VARCHAR(100),
+nota_nm DOUBLE) ENGINE = InnoDB;
+

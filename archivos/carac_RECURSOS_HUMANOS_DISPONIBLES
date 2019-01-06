@@ -1,0 +1,13 @@
+(rhdID INT NOT NULL PRIMARY KEY, 
+nombre_rhd VARCHAR(50),
+tipo_rhd INT NOT NULL,
+USUARIO VARCHAR(50),
+ACCESO VARCHAR(100),
+NIVEL INT,
+notas_cd DOUBLE,
+			  CONSTRAINT `TIPO DE RECURSO`
+					FOREIGN KEY (tipo_rhd) REFERENCES RECURSOS_HUMANOS (rhID)
+						    ON DELETE CASCADE
+						       	      ON UPDATE RESTRICT							     
+							      
+							      ) ENGINE = InnoDB;

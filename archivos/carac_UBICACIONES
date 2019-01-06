@@ -1,0 +1,3 @@
+(ubID INT NOT NULL PRIMARY KEY, 
+ubicacion_ub VARCHAR(50),
+nota_ub DOUBLE) ENGINE = InnoDB;

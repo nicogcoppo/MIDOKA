@@ -1,0 +1,11 @@
+(mdID INT NOT NULL AUTO_INCREMENT, 
+mod_md VARCHAR(100) NOT NULL,
+categoria_md INT NOT NULL,
+PRIMARY KEY (mdID),
+UNIQUE index_modelo (mod_md,categoria_md),
+			  CONSTRAINT `CATEGORIA DEL MODELO`
+					FOREIGN KEY (categoria_md) REFERENCES CATEGORIA (claID)
+						    ON DELETE CASCADE
+						       	      ON UPDATE RESTRICT							     
+							      
+							      ) ENGINE = InnoDB;

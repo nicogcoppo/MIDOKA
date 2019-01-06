@@ -1,0 +1,3 @@
+(scID INT NOT NULL PRIMARY KEY, 
+tipo_sc VARCHAR(50),
+nota_sc DOUBLE) ENGINE = InnoDB;

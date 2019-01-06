@@ -1,0 +1,4 @@
+ID|TIPO_COMISION|VENTA|COBRANZA|ADMINISTRACION|DEPOSITO|
+1 |GENERAL      |.07  |.03     |.015	      |.03     |
+2 |FILGO	|.07  |.03     |.085	      |.015    |
+3 |ESPECIAL	|.07  |.03     |0	      |0       |

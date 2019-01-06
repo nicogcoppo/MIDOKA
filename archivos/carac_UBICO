@@ -1,0 +1,10 @@
+(ubicoID INT NOT NULL PRIMARY KEY, 
+ubico VARCHAR(50),
+ubico_ubicacion INT NOT NULL,
+ubico_nota DOUBLE,
+CONSTRAINT `ubicacion`
+                                               FOREIGN KEY (ubico_ubicacion) REFERENCES UBICACIONES (ubiID)
+					                                                           ON DELETE CASCADE
+												                                                                 ON UPDATE RESTRICT
+																				                                                               ) ENGINE = InnoDB;
+

@@ -1,0 +1,3 @@
+(rhID INT NOT NULL PRIMARY KEY, 
+rh_rh VARCHAR(30) NOT NULL,
+notas_nc DOUBLE)
