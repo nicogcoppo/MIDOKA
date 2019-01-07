@@ -51,7 +51,7 @@ function transmision {
     
     ## Copio Archivos
 
-    rsync -avz --delete -e --progress ${USUARIO}@${SERVER}:/home/${USUARIO}/MIDOKA/ /home/${USER}/MIDOKA/ 
+    rsync -avz --delete --progress ${USUARIO}@${SERVER}:/home/${USUARIO}/MIDOKA/ /home/${USER}/MIDOKA/ 
     
     ## Copio Base de datos
 
@@ -60,7 +60,7 @@ function transmision {
     
     # me bajo las ultimas base de datos
     
-    rsync -avz --delete -e --progress root@${SERVER}:/root/${SERVERdata}/ /home/${USER}/${SERVERdata}/ 
+    rsync -avz --delete --progress root@${SERVER}:/root/${SERVERdata}/ /home/${USER}/${SERVERdata}/ 
     
 
 }
