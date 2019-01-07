@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Script para el automatizado del proceso de impresion en el deposito
+# Script para el espejado del servidor
 #
 
 ############## DECLARACIONES ###########################
@@ -8,19 +8,9 @@
 
 declare -rx SSHPASS="/usr/bin/sshpass"
 
-declare -rx PUTTY="/usr/bin/scp"
+declare -a COMANDOS=($SSHPASS "/usr/bin/rsync")
 
-declare -rx WALL="/usr/bin/wall"
-
-declare -a COMANDOS=($SSHPASS $PUTTY $WALL "/usr/bin/rsync")
-
-declare -a DETALLES=("$SSHPASS" "scp" "wall" "rsync")
-
-declare -r OPER_ID="${RANDOM}"
-
-declare  DIR="/home/playcolor/MIDOKA_PGC/impresion/repartos/" ## Directorio de trabajo
-
-declare -r IMPRESORA="HP-LaserJet-Professional-P1102w"
+declare -a DETALLES=("$SSHPASS" "rsync")
 
 declare CONTADOR=0
 
@@ -28,11 +18,15 @@ declare -r GRABADO=""$(date +%F)"_"$(hostname)".sql"
 
 ######### CONFIGURACION ################################
 
-declare -r USUARIO="playcolor"
+declare -r PASS=$(cat ${HOME}'/pass' | base64 -d)
 
-declare DBASE="MIDOKA_PGC_B"
+declare -r SERVER=$(cat ${HOME}'/server' | base64 -d) # Reemplazar solo con LA IP del server
 
-declare DIRECTORIO_ORIGEN="MIDOKA_PGC_DATA"
+declare -r USUARIO="sshcolor" # Reemplazar con el nombre de usuario en el server
+
+declare DBASE="MIDOKA_PGC_B" #Reemplazar con el nombre de la base de datos
+
+declare -r SERVERdata="resguardosMidokaPgc/" #Reemplazar con la carpeta de resguardo en el server
 
 ################## SANIDADES ###########################
 
@@ -57,33 +51,35 @@ function transmision {
     
     ## Copio Archivos
 
-    rsync -avz --delete -e "sshpass -p '36729038macaco12cat0class' ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" --progress ${USUARIO}@mail.midoka.com.ar:/home/${USUARIO}/MIDOKA_PGC/ /home/${USUARIO}/MIDOKA_PGC/ 
-
-    rsync -avz --delete -e "sshpass -p '36729038macaco12cat0class' ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" --progress ${USUARIO}@mail.midoka.com.ar:/home/${USUARIO}/REPOSITORIO/ /home/${USUARIO}/REPOSITORIO/ 
+    rsync -avz --delete -e --progress ${USUARIO}@${SERVER}:/home/${USUARIO}/MIDOKA/ /home/${USER}/MIDOKA/ 
     
     ## Copio Base de datos
 
-      
-    sshpass -p "cat0classmacaco1236729038" ssh -o StrictHostKeyChecking=no root@mail.midoka.com.ar "find ${DIRECTORIO_ORIGEN}/* -type d -ctime +45  -exec rm -rf {} \;"
-
-
-    sshpass -p "cat0classmacaco1236729038" ssh -o StrictHostKeyChecking=no root@mail.midoka.com.ar "mysqldump -u root "${DBASE}" > ${DIRECTORIO_ORIGEN}/"${GRABADO}""
+    ssh -o StrictHostKeyChecking=no root@${SERVER} "mysqldump -u root "${DBASE}" > ${SERVERdata}/"${GRABADO}""
     
     
     # me bajo las ultimas base de datos
     
-    rsync -avz --delete -e "sshpass -p 'cat0classmacaco1236729038' ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" --progress root@mail.midoka.com.ar:/root/${DIRECTORIO_ORIGEN}/ /home/${USUARIO}/${DIRECTORIO_ORIGEN}/ 
+    rsync -avz --delete -e --progress root@${SERVER}:/root/${SERVERdata}/ /home/${USER}/${SERVERdata}/ 
     
 
 }
 
 ################## SCRIPT #################################
 
+
+
+# VERIFICO DIRECTORIOS , CREO EN CASO DE NUEVA DB
+
+if [ ! -d "${HOME}/${SERVERdata}" ]; then
+    mkdir "${HOME}/${SERVERdata}"
+fi
+
 transmision
 
 mysql -u root --execute="DROP DATABASE IF EXISTS "${DBASE}";CREATE DATABASE "${DBASE}";"
 
-mysql -u root -D"${DBASE}" </home/${USUARIO}/${DIRECTORIO_ORIGEN}/${GRABADO} 
+mysql -u root -D"${DBASE}" </home/${USER}/${SERVERdata}/${GRABADO} 
 
 
 #################### LIMPIEZA ##########################
