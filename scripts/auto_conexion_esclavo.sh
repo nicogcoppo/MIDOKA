@@ -1,14 +1,23 @@
 #!/bin/bash
 #
 #
-#
+#  SCRIPT PARA LA AUTOCONEXION DE LA MAQUINA CLIENTE
+#  RECORDAR QUE LOS DATOS DEL SERVER SE DEBEN ALOJAR EN EL DIRECTORIO
+#  HOME CODIFICADOS EN BASE64
 
+########### VARIABLES ##################
+
+declare -r PASS=$(cat ${HOME}'/pass' | base64 -d)
+
+declare -r SERVER=$(cat ${HOME}'/server' | base64 -d)
+
+########### SCRIPT #####################
 
 while true; do
 
     #ssh -o TCPKeepAlive=yes -o ServerAliveInterval=50 user@box.example.com
     
-    sshpass -p "36729038macaco12cat0class" ssh -o TCPKeepAlive=yes -o ServerAliveInterval=50 -o StrictHostKeyChecking=no playcolor@mail.midoka.com.ar 
+    sshpass -p "${PASS}" ssh -o TCPKeepAlive=yes -o ServerAliveInterval=50 -o StrictHostKeyChecking=no "${SERVER}" 
 
     clear
 

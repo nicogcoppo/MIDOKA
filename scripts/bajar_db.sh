@@ -41,7 +41,7 @@ read UNO
 while true; do
 
     case $UNO in
-	1) mysql -u ${USER} --password="${pass}" --execute="DROP DATABASE MIDOKA_PGC_B;CREATE DATABASE MIDOKA_PGC_B;" && bash /home/nico/_ORG/PLAY-COLOR/MIDOKA_PGC/scripts/rutina_esclavo_deposito.sh && instalar && break;;
+	1) mysql -u ${USER} --password="${pass}" --execute="DROP DATABASE MIDOKA_PGC_B;CREATE DATABASE MIDOKA_PGC_B;" && bash ./scripts/rutina_esclavo_deposito.sh && instalar && break;;
 	2) mysql -u ${USER} --password="${pass}" --execute="DROP DATABASE MIDOKA_PGC_B;CREATE DATABASE MIDOKA_PGC_B;" && instalar && break ;;
 	*) echo "no se reconocio la orden . . . " ;;
     esac
