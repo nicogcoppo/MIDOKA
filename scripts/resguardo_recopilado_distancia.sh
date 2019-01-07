@@ -18,9 +18,7 @@ declare -r GRABADO=""$(date +%F)"_"$(hostname)".sql"
 
 ######### CONFIGURACION ################################
 
-declare -r PASS=$(cat ${HOME}'/pass' | base64 -d)
-
-declare -r SERVER=$(cat ${HOME}'/server' | base64 -d) # Reemplazar solo con LA IP del server
+declare -r SERVER=$(cat ${HOME}'/serverIP' | base64 -d) # Reemplazar solo con LA IP del server
 
 declare -r USUARIO="sshcolor" # Reemplazar con el nombre de usuario en el server
 
@@ -51,7 +49,7 @@ function transmision {
     
     ## Copio Archivos
 
-    rsync -avz --delete --progress ${USUARIO}@${SERVER}:/home/${USUARIO}/MIDOKA/ /home/${USER}/MIDOKA/ 
+    rsync -avz --delete --progress root@${SERVER}:/home/${USUARIO}/MIDOKA/ /home/${USER}/MIDOKA/ 
     
     ## Copio Base de datos
 
