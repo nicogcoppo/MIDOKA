@@ -52,7 +52,7 @@ configure:2034: found /usr/bin/gcc
 configure:2044: result: gcc
 configure:2288: checking for C compiler version
 configure:2291: gcc --version </dev/null >&5
-gcc (Debian 6.3.0-18) 6.3.0 20170516
+gcc (Debian 6.3.0-18+deb9u1) 6.3.0 20170516
 Copyright (C) 2016 Free Software Foundation, Inc.
 This is free software; see the source for copying conditions.  There is NO
 warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
@@ -63,9 +63,9 @@ Using built-in specs.
 COLLECT_GCC=gcc
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/6/lto-wrapper
 Target: x86_64-linux-gnu
-Configured with: ../src/configure -v --with-pkgversion='Debian 6.3.0-18' --with-bugurl=file:///usr/share/doc/gcc-6/README.Bugs --enable-languages=c,ada,c++,java,go,d,fortran,objc,obj-c++ --prefix=/usr --program-suffix=-6 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --enable-default-pie --with-system-zlib --disable-browser-plugin --enable-java-awt=gtk --enable-gtk-cairo --with-java-home=/usr/lib/jvm/java-1.5.0-gcj-6-amd64/jre --enable-java-home --with-jvm-root-dir=/usr/lib/jvm/java-1.5.0-gcj-6-amd64 --with-jvm-jar-dir=/usr/lib/jvm-exports/java-1.5.0-gcj-6-amd64 --with-arch-directory=amd64 --with-ecj-jar=/usr/share/java/eclipse-ecj.jar --with-target-system-zlib --enable-objc-gc=auto --enable-multiarch --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu
+Configured with: ../src/configure -v --with-pkgversion='Debian 6.3.0-18+deb9u1' --with-bugurl=file:///usr/share/doc/gcc-6/README.Bugs --enable-languages=c,ada,c++,java,go,d,fortran,objc,obj-c++ --prefix=/usr --program-suffix=-6 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --enable-default-pie --with-system-zlib --disable-browser-plugin --enable-java-awt=gtk --enable-gtk-cairo --with-java-home=/usr/lib/jvm/java-1.5.0-gcj-6-amd64/jre --enable-java-home --with-jvm-root-dir=/usr/lib/jvm/java-1.5.0-gcj-6-amd64 --with-jvm-jar-dir=/usr/lib/jvm-exports/java-1.5.0-gcj-6-amd64 --with-arch-directory=amd64 --with-ecj-jar=/usr/share/java/eclipse-ecj.jar --with-target-system-zlib --enable-objc-gc=auto --enable-multiarch --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu
 Thread model: posix
-gcc version 6.3.0 20170516 (Debian 6.3.0-18) 
+gcc version 6.3.0 20170516 (Debian 6.3.0-18+deb9u1) 
 configure:2299: $? = 0
 configure:2301: gcc -V </dev/null >&5
 gcc: error: unrecognized command line option '-V'
@@ -319,7 +319,7 @@ configure:4571: found /usr/bin/g++
 configure:4581: result: g++
 configure:4597: checking for C++ compiler version
 configure:4600: g++ --version </dev/null >&5
-g++ (Debian 6.3.0-18) 6.3.0 20170516
+g++ (Debian 6.3.0-18+deb9u1) 6.3.0 20170516
 Copyright (C) 2016 Free Software Foundation, Inc.
 This is free software; see the source for copying conditions.  There is NO
 warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
@@ -330,9 +330,9 @@ Using built-in specs.
 COLLECT_GCC=g++
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/6/lto-wrapper
 Target: x86_64-linux-gnu
-Configured with: ../src/configure -v --with-pkgversion='Debian 6.3.0-18' --with-bugurl=file:///usr/share/doc/gcc-6/README.Bugs --enable-languages=c,ada,c++,java,go,d,fortran,objc,obj-c++ --prefix=/usr --program-suffix=-6 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --enable-default-pie --with-system-zlib --disable-browser-plugin --enable-java-awt=gtk --enable-gtk-cairo --with-java-home=/usr/lib/jvm/java-1.5.0-gcj-6-amd64/jre --enable-java-home --with-jvm-root-dir=/usr/lib/jvm/java-1.5.0-gcj-6-amd64 --with-jvm-jar-dir=/usr/lib/jvm-exports/java-1.5.0-gcj-6-amd64 --with-arch-directory=amd64 --with-ecj-jar=/usr/share/java/eclipse-ecj.jar --with-target-system-zlib --enable-objc-gc=auto --enable-multiarch --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu
+Configured with: ../src/configure -v --with-pkgversion='Debian 6.3.0-18+deb9u1' --with-bugurl=file:///usr/share/doc/gcc-6/README.Bugs --enable-languages=c,ada,c++,java,go,d,fortran,objc,obj-c++ --prefix=/usr --program-suffix=-6 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --enable-default-pie --with-system-zlib --disable-browser-plugin --enable-java-awt=gtk --enable-gtk-cairo --with-java-home=/usr/lib/jvm/java-1.5.0-gcj-6-amd64/jre --enable-java-home --with-jvm-root-dir=/usr/lib/jvm/java-1.5.0-gcj-6-amd64 --with-jvm-jar-dir=/usr/lib/jvm-exports/java-1.5.0-gcj-6-amd64 --with-arch-directory=amd64 --with-ecj-jar=/usr/share/java/eclipse-ecj.jar --with-target-system-zlib --enable-objc-gc=auto --enable-multiarch --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu
 Thread model: posix
-gcc version 6.3.0 20170516 (Debian 6.3.0-18) 
+gcc version 6.3.0 20170516 (Debian 6.3.0-18+deb9u1) 
 configure:4608: $? = 0
 configure:4610: g++ -V </dev/null >&5
 g++: error: unrecognized command line option '-V'
@@ -493,7 +493,7 @@ configure:5272: found /usr/bin/f77
 configure:5282: result: f77
 configure:5297: checking for Fortran 77 compiler version
 configure:5300: f77 --version </dev/null >&5
-GNU Fortran (Debian 6.3.0-18) 6.3.0 20170516
+GNU Fortran (Debian 6.3.0-18+deb9u1) 6.3.0 20170516
 Copyright (C) 2016 Free Software Foundation, Inc.
 This is free software; see the source for copying conditions.  There is NO
 warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
@@ -504,9 +504,9 @@ Using built-in specs.
 COLLECT_GCC=f77
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/6/lto-wrapper
 Target: x86_64-linux-gnu
-Configured with: ../src/configure -v --with-pkgversion='Debian 6.3.0-18' --with-bugurl=file:///usr/share/doc/gcc-6/README.Bugs --enable-languages=c,ada,c++,java,go,d,fortran,objc,obj-c++ --prefix=/usr --program-suffix=-6 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --enable-default-pie --with-system-zlib --disable-browser-plugin --enable-java-awt=gtk --enable-gtk-cairo --with-java-home=/usr/lib/jvm/java-1.5.0-gcj-6-amd64/jre --enable-java-home --with-jvm-root-dir=/usr/lib/jvm/java-1.5.0-gcj-6-amd64 --with-jvm-jar-dir=/usr/lib/jvm-exports/java-1.5.0-gcj-6-amd64 --with-arch-directory=amd64 --with-ecj-jar=/usr/share/java/eclipse-ecj.jar --with-target-system-zlib --enable-objc-gc=auto --enable-multiarch --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu
+Configured with: ../src/configure -v --with-pkgversion='Debian 6.3.0-18+deb9u1' --with-bugurl=file:///usr/share/doc/gcc-6/README.Bugs --enable-languages=c,ada,c++,java,go,d,fortran,objc,obj-c++ --prefix=/usr --program-suffix=-6 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --enable-default-pie --with-system-zlib --disable-browser-plugin --enable-java-awt=gtk --enable-gtk-cairo --with-java-home=/usr/lib/jvm/java-1.5.0-gcj-6-amd64/jre --enable-java-home --with-jvm-root-dir=/usr/lib/jvm/java-1.5.0-gcj-6-amd64 --with-jvm-jar-dir=/usr/lib/jvm-exports/java-1.5.0-gcj-6-amd64 --with-arch-directory=amd64 --with-ecj-jar=/usr/share/java/eclipse-ecj.jar --with-target-system-zlib --enable-objc-gc=auto --enable-multiarch --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu
 Thread model: posix
-gcc version 6.3.0 20170516 (Debian 6.3.0-18) 
+gcc version 6.3.0 20170516 (Debian 6.3.0-18+deb9u1) 
 configure:5308: $? = 0
 configure:5310: f77 -V </dev/null >&5
 f77: error: unrecognized command line option '-V'
@@ -658,8 +658,8 @@ configure:18841: checking for perl
 configure:18859: found /usr/bin/perl
 configure:18871: result: /usr/bin/perl
 configure:19010: checking for dot
-configure:19043: result: no
-configure:19053: WARNING: dot not found - will not generate graphics for doxygen documentation
+configure:19028: found /usr/bin/dot
+configure:19040: result: /usr/bin/dot
 configure:20800: creating ./config.status
 
 ## ---------------------- ##
@@ -735,6 +735,7 @@ ac_cv_header_unistd_h=yes
 ac_cv_host=x86_64-unknown-linux-gnu
 ac_cv_host_alias=x86_64-unknown-linux-gnu
 ac_cv_objext=o
+ac_cv_path_ac_pt_DX_DOT=/usr/bin/dot
 ac_cv_path_ac_pt_DX_DOXYGEN=/usr/bin/doxygen
 ac_cv_path_ac_pt_DX_PERL=/usr/bin/perl
 ac_cv_path_install='/usr/bin/install -c'
@@ -785,15 +786,15 @@ lt_lt_cv_sys_global_symbol_to_cdecl='"sed -n -e '\''s/^. .* \\(.*\\)\$/extern in
 ## Output variables. ##
 ## ----------------- ##
 
-ACLOCAL='${SHELL} /home/nico/_ORG/PLAY-COLOR/MIDOKA_PGC/ThirdParty/paps-0.6.8/missing --run aclocal-1.9'
+ACLOCAL='${SHELL} /home/nico/_ORG/PLAY-COLOR/MIDOKA_PGC_GITHUB/midokaPgcGitHub/ThirdParty/paps-0.6.8/missing --run aclocal-1.9'
 AMDEPBACKSLASH='\'
 AMDEP_FALSE='#'
 AMDEP_TRUE=''
-AMTAR='${SHELL} /home/nico/_ORG/PLAY-COLOR/MIDOKA_PGC/ThirdParty/paps-0.6.8/missing --run tar'
+AMTAR='${SHELL} /home/nico/_ORG/PLAY-COLOR/MIDOKA_PGC_GITHUB/midokaPgcGitHub/ThirdParty/paps-0.6.8/missing --run tar'
 AR='ar'
-AUTOCONF='${SHELL} /home/nico/_ORG/PLAY-COLOR/MIDOKA_PGC/ThirdParty/paps-0.6.8/missing --run autoconf'
-AUTOHEADER='${SHELL} /home/nico/_ORG/PLAY-COLOR/MIDOKA_PGC/ThirdParty/paps-0.6.8/missing --run autoheader'
-AUTOMAKE='${SHELL} /home/nico/_ORG/PLAY-COLOR/MIDOKA_PGC/ThirdParty/paps-0.6.8/missing --run automake-1.9'
+AUTOCONF='${SHELL} /home/nico/_ORG/PLAY-COLOR/MIDOKA_PGC_GITHUB/midokaPgcGitHub/ThirdParty/paps-0.6.8/missing --run autoconf'
+AUTOHEADER='${SHELL} /home/nico/_ORG/PLAY-COLOR/MIDOKA_PGC_GITHUB/midokaPgcGitHub/ThirdParty/paps-0.6.8/missing --run autoheader'
+AUTOMAKE='${SHELL} /home/nico/_ORG/PLAY-COLOR/MIDOKA_PGC_GITHUB/midokaPgcGitHub/ThirdParty/paps-0.6.8/missing --run automake-1.9'
 AWK='gawk'
 CC='gcc'
 CCDEPMODE='depmode=gcc3'
@@ -814,8 +815,8 @@ DX_COND_chm_FALSE=''
 DX_COND_chm_TRUE='#'
 DX_COND_doc_FALSE='#'
 DX_COND_doc_TRUE=''
-DX_COND_dot_FALSE=''
-DX_COND_dot_TRUE='#'
+DX_COND_dot_FALSE='#'
+DX_COND_dot_TRUE=''
 DX_COND_html_FALSE='#'
 DX_COND_html_TRUE=''
 DX_COND_latex_FALSE=''
@@ -832,11 +833,11 @@ DX_COND_xml_FALSE=''
 DX_COND_xml_TRUE='#'
 DX_CONFIG='doxygen.cfg'
 DX_DOCDIR='doxygen-doc'
-DX_DOT=''
+DX_DOT='/usr/bin/dot'
 DX_DOXYGEN='/usr/bin/doxygen'
 DX_DVIPS=''
 DX_EGREP=''
-DX_ENV=' SRCDIR='.' PROJECT='libpaps' DOCDIR='doxygen-doc' VERSION='0.6.8' PERL_PATH='/usr/bin/perl' HAVE_DOT='NO' GENERATE_MAN='NO' GENERATE_RTF='NO' GENERATE_XML='NO' GENERATE_HTMLHELP='NO' GENERATE_CHI='NO' GENERATE_HTML='YES' GENERATE_LATEX='NO''
+DX_ENV=' SRCDIR='.' PROJECT='libpaps' DOCDIR='doxygen-doc' VERSION='0.6.8' PERL_PATH='/usr/bin/perl' HAVE_DOT='YES' DOT_PATH='/usr/bin' GENERATE_MAN='NO' GENERATE_RTF='NO' GENERATE_XML='NO' GENERATE_HTMLHELP='NO' GENERATE_CHI='NO' GENERATE_HTML='YES' GENERATE_LATEX='NO''
 DX_FLAG_[]DX_CURRENT_FEATURE='[]DX_CURRENT_FEATURE'
 DX_FLAG_[]DX_CURRENT_FEATURE='[]DX_CURRENT_FEATURE'
 DX_FLAG_[]DX_CURRENT_FEATURE='[]DX_CURRENT_FEATURE'
@@ -861,7 +862,7 @@ DX_FLAG_[]DX_CURRENT_FEATURE='[]DX_CURRENT_FEATURE'
 DX_FLAG_chi='0'
 DX_FLAG_chm='0'
 DX_FLAG_doc='1'
-DX_FLAG_dot='0'
+DX_FLAG_dot='1'
 DX_FLAG_html='1'
 DX_FLAG_man='0'
 DX_FLAG_pdf='0'
@@ -892,7 +893,7 @@ LIBS=''
 LIBTOOL='$(SHELL) $(top_builddir)/libtool'
 LN_S='ln -s'
 LTLIBOBJS=''
-MAKEINFO='${SHELL} /home/nico/_ORG/PLAY-COLOR/MIDOKA_PGC/ThirdParty/paps-0.6.8/missing --run makeinfo'
+MAKEINFO='${SHELL} /home/nico/_ORG/PLAY-COLOR/MIDOKA_PGC_GITHUB/midokaPgcGitHub/ThirdParty/paps-0.6.8/missing --run makeinfo'
 OBJEXT='o'
 PACKAGE='paps'
 PACKAGE_BUGREPORT=''
@@ -913,7 +914,7 @@ ac_ct_CXX='g++'
 ac_ct_F77='f77'
 ac_ct_RANLIB='ranlib'
 ac_ct_STRIP='strip'
-ac_pt_DX_DOT=''
+ac_pt_DX_DOT='/usr/bin/dot'
 ac_pt_DX_DOXYGEN='/usr/bin/doxygen'
 ac_pt_DX_DVIPS=''
 ac_pt_DX_EGREP=''
@@ -946,7 +947,7 @@ host_os='linux-gnu'
 host_vendor='unknown'
 includedir='${prefix}/include'
 infodir='${prefix}/info'
-install_sh='/home/nico/_ORG/PLAY-COLOR/MIDOKA_PGC/ThirdParty/paps-0.6.8/install-sh'
+install_sh='/home/nico/_ORG/PLAY-COLOR/MIDOKA_PGC_GITHUB/midokaPgcGitHub/ThirdParty/paps-0.6.8/install-sh'
 libdir='${exec_prefix}/lib'
 libexecdir='${exec_prefix}/libexec'
 localstatedir='${prefix}/var'
