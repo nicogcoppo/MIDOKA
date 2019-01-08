@@ -125,6 +125,14 @@ function control_cantidades {
     return 0
 }
 
+function cambioOporCero {
+
+    cat "./"${DIRECTORIO}"/DEPOVISTA_"${SALIDA}"" | sed 's/o/0/g' >${temp}/depoOporCero
+
+    mv ${temp}/depoOporCero "./"${DIRECTORIO}"/DEPOVISTA_"${SALIDA}""
+
+}
+
 ###############  SCRIPT ###########################
 
 # TRES ARCHIVOS >> REFERENCIA_1-1-1 : ID DE LOS MOTIVOS
@@ -140,6 +148,10 @@ while true;do
 	   2>"./"${DIRECTORIO}"/DEPOVISTA_"${SALIDA}""
 
 
+    # Reemplazo de la tecla 0
+
+    cambioOporCero
+    
     # ESCRITURA DEL ARCHIVO PARA GRABAR
 
     rm "./"${DIRECTORIO}"/"${SALIDA}"" "./"${DIRECTORIO}"/##"${SALIDA}""
