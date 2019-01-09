@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 #
 # Script para el espejado del servidor
 #
@@ -49,7 +49,7 @@ function transmision {
     
     ## Copio Archivos
 
-    #/usr/bin/rsync -avz --delete -e "ssh" --progress root@${SERVER}:/home/${USUARIO}/MIDOKA/ /home/${USER}/MIDOKA/ 
+    /usr/bin/rsync -avz --delete -e "ssh" --progress root@${SERVER}:/home/${USUARIO}/MIDOKA/ /home/${USER}/MIDOKA/ 
     
     ## Copio Base de datos
 
@@ -58,9 +58,9 @@ function transmision {
     
     # me bajo las ultimas base de datos
     
-    #/usr/bin/rsync -avz --delete -e "ssh" --progress root@${SERVER}:/root/${SERVERdata}/ /home/${USER}/${SERVERdata}/ 
+    /usr/bin/rsync -avz --delete -e "ssh" --progress root@${SERVER}:/root/${SERVERdata}/ /home/${USER}/${SERVERdata}/ 
     
-    scp root@${SERVER}:/root/${SERVERdata}/${GRABADO} /home/${USER}/${SERVERdata}/  
+    
 }
 
 ################## SCRIPT #################################
