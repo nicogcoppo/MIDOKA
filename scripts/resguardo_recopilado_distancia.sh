@@ -49,7 +49,7 @@ function transmision {
     
     ## Copio Archivos
 
-    rsync -avz --delete -e "ssh" --progress root@${SERVER}:/home/${USUARIO}/MIDOKA/ /home/${USER}/MIDOKA/ 
+    /usr/bin/rsync -avz --delete -e "ssh" --progress root@${SERVER}:/home/${USUARIO}/MIDOKA/ /home/${USER}/MIDOKA/ 
     
     ## Copio Base de datos
 
@@ -58,7 +58,7 @@ function transmision {
     
     # me bajo las ultimas base de datos
     
-    rsync -avz --delete -e "ssh" --progress root@${SERVER}:/root/${SERVERdata}/ /home/${USER}/${SERVERdata}/ 
+    /usr/bin/rsync -avz --delete -e "ssh" --progress root@${SERVER}:/root/${SERVERdata}/ /home/${USER}/${SERVERdata}/ 
     
 
 }
