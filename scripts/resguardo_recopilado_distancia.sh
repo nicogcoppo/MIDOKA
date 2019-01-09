@@ -14,7 +14,7 @@ declare -a DETALLES=("$SSHPASS" "rsync")
 
 declare CONTADOR=0
 
-declare -r GRABADO=""$(date +%F)"_"$(hostname)".sql"
+declare -r GRABADO=""$(date +%F:%Hh)"_"$(hostname)".sql"
 
 ######### CONFIGURACION ################################
 
@@ -75,9 +75,9 @@ fi
 
 transmision
 
-mysql -u root --execute="DROP DATABASE IF EXISTS "${DBASE}";CREATE DATABASE "${DBASE}";"
+#mysql -u root --execute="DROP DATABASE IF EXISTS "${DBASE}";CREATE DATABASE "${DBASE}";"
 
-mysql -u root -D"${DBASE}" </home/${USER}/${SERVERdata}/${GRABADO} 
+#mysql -u root -D"${DBASE}" </home/${USER}/${SERVERdata}/${GRABADO} 
 
 
 #################### LIMPIEZA ##########################
