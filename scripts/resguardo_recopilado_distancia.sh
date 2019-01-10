@@ -1,7 +1,8 @@
 #!/bin/sh
 #
 # Script para el espejado del servidor
-#
+# Tener en cuenta que sera necesario habilitar la conexion por password para
+# La direccion IP del servidor esclavo en el que corre este script
 
 ############## DECLARACIONES ###########################
 
@@ -19,6 +20,8 @@ declare -r GRABADO=""$(date +%F:%Hh)"_"$(hostname)".sql"
 ######### CONFIGURACION ################################
 
 declare -r SERVER=$(cat ${HOME}'/serverIP' | base64 -d) # Reemplazar solo con LA IP del server
+
+declare -r passServer=$(cat ${HOME}'/serverPass' | base64 -d) # Reemplazar con el password root del server
 
 declare -r USUARIO="sshcolor" # Reemplazar con el nombre de usuario en el server
 
@@ -49,16 +52,16 @@ function transmision {
     
     ## Copio Archivos
 
-    /usr/bin/rsync -avz --delete -e "ssh" --progress root@${SERVER}:/home/${USUARIO}/MIDOKA/ /home/${USER}/MIDOKA/ 
+    rsync -avz --delete -e "sshpass -p ${passServer} ssh" --progress root@${SERVER}:/home/${USUARIO}/MIDOKA/ /home/${USER}/MIDOKA/ 
     
     ## Copio Base de datos
 
-    ssh -o StrictHostKeyChecking=no root@${SERVER} "mysqldump -u root "${DBASE}" > ${SERVERdata}/"${GRABADO}""
+    sshpass -p ${passServer} ssh -o StrictHostKeyChecking=no root@${SERVER} "mysqldump -u root "${DBASE}" > ${SERVERdata}/"${GRABADO}""
     
     
     # me bajo las ultimas base de datos
     
-    /usr/bin/rsync -avz --delete -e "ssh" --progress root@${SERVER}:/root/${SERVERdata}/ /home/${USER}/${SERVERdata}/ 
+    rsync -avz --delete -e "sshpass -p ${passServer} ssh" --progress root@${SERVER}:/root/${SERVERdata}/ /home/${USER}/${SERVERdata}/ 
     
     
 }
