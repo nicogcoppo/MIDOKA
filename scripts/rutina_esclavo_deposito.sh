@@ -2,6 +2,8 @@
 #
 # Script para el resguardo LOCAL de la base de datos
 #
+# Si $1 es nulo se creara una copia de la base de datos al momento
+# de la ejecucion de este script
 
 ############## DECLARACIONES ###########################
 
@@ -22,7 +24,7 @@ declare -r RAIZ=""${HOME}"/_ORG/PLAY-COLOR/MIDOKA_PGC_GITHUB/midokaPgcGitHub/" #
 
 declare -r ACUMULADOR=""${HOME}"/_ORG/PLAY-COLOR/resguardosMidokaPgc/" #Reemplazar por el directorio de copias de seguridad
 
-declare -r SERVER="root@51.15.219.53" #Reemplazar con el nombre del server
+declare -r SERVER="root@66.97.37.139" #Reemplazar con el nombre del server
 
 declare -r SERVERdata="resguardosMidokaPgc/" #Reemplazar con la carpeta de resguardo en el server
 
@@ -71,9 +73,9 @@ fi
 while true; do
 
    
-    ssh -o StrictHostKeyChecking=no "${SERVER}" "mysqldump -u root "${DBASE}" > "${SERVERdata}""${GRABADO}";find "${SERVERdata}"* -type f -ctime +45  -exec rm -rf {} \;"
+    test -z $1 && ssh -o StrictHostKeyChecking=no "${SERVER}" "mysqldump -u root "${DBASE}" > "${SERVERdata}""${GRABADO}";find "${SERVERdata}"* -type f -ctime +45  -exec rm -rf {} \;"
         
-    rsync -az --progress "${SERVER}":"${SERVERdata}" ${ACUMULADOR}
+    rsync -az "${SERVER}":"${SERVERdata}" ${ACUMULADOR}
 
 
     case $? in

@@ -64,7 +64,7 @@ set ylabel "MONTO ($)"
 
 #set xrange [15:24]
 
-set yrange [0:900000]
+set yrange [0:1200000]
 
 set xtics rotate
 
@@ -81,7 +81,7 @@ set ylabel "MONTO ($)"
 
 #set xrange [15:24]
 
-set yrange [0:600000]
+set yrange [0:900000]
 
 set xtics rotate
 
@@ -98,7 +98,7 @@ set ylabel "MONTO ($)"
 
 #set xrange [15:24]
 
-set yrange [0:150000]
+set yrange [0:170000]
 
 set xtics rotate
 
@@ -115,7 +115,7 @@ set ylabel "MONTO ($)"
 
 #set xrange [15:24]
 
-set yrange [-20000:80000]
+set yrange [-20000:100000]
 
 set xtics rotate
 
@@ -167,7 +167,7 @@ set yrange [0:12]
 
 set xtics rotate
 
-plot "./RESULTADOS.dat" using 0:($2-$3-$4-$5-$6-$7-$8-$9)/$2:xticlabels(1) ti "Utilidad" w l,"" using 0:($3/$2)*100 ti "Mercaderias" w l,"" using 0:($4/$2)*100 ti "Perdidas" w l,"" using 0:($5/$2)*100 ti "Comisiones" w l,"" using 0:($6/$2)*100 ti "Fijos" w l,"" using 0:($7/$2)*100 ti "Movilidad" w l,"" using 0:($8/$2)*100 ti "Insumos" w l,"" using 0:($9/$2)*100 ti "Pablo" w l
+plot "./RESULTADOS.dat" using 0:(($2-$3-$4-$5-$6-$7-$8-$9)/$2)*100:xticlabels(1) ti "Utilidad" w l,"" using 0:($3/$2)*100 ti "Mercaderias" w l,"" using 0:($4/$2)*100 ti "Perdidas" w l,"" using 0:($5/$2)*100 ti "Comisiones" w l,"" using 0:($6/$2)*100 ti "Fijos" w l,"" using 0:($7/$2)*100 ti "Movilidad" w l,"" using 0:($8/$2)*100 ti "Insumos" w l,"" using 0:($9/$2)*100 ti "Pablo" w l
 
 ## /////////////////////////////////////////////////////////////
 

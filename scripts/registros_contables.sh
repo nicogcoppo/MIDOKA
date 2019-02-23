@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Script para la carga automatica del stock desde un archivo csv
+# Script para la carga automatica de registros contables mediante CSV
 #
 
 ############## DECLARACIONES ###########################
