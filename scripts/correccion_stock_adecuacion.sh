@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Script para el agregado de un nuevo cliente
+# Script para la adecuacion on-line del stock
 #
 
 ############## DECLARACIONES ###########################
@@ -655,7 +655,7 @@ done
 mysql -u "${user}" --password="${pass}" --execute="SELECT artID,CANTIDAD_RE FROM "${DB}".RECEPCION_CONTABILIDAD JOIN("${DB}".ARTICULOS,"${DB}".PRECIOS,"${DB}".CATEGORIA,"${DB}".MODELO,"${DB}".MOTIVO) ON("${DB}".PRECIOS.RUBRO_pr="${DB}".ARTICULOS.RUBRO AND "${DB}".PRECIOS.CATEGORIA_pr="${DB}".ARTICULOS.CATEGORIA AND "${DB}".PRECIOS.MODELO_pr="${DB}".ARTICULOS.MODELO AND "${DB}".CATEGORIA.claID="${DB}".ARTICULOS.CATEGORIA AND "${DB}".MOTIVO.mtID="${DB}".ARTICULOS.MOTIVO AND "${DB}".MODELO.mdID="${DB}".ARTICULOS.MODELO AND "${DB}".ARTICULOS.artID="${DB}".RECEPCION_CONTABILIDAD.ID_ARTICULO_RE);" 2>${temp}"log_errores_nov.cont" | tail -n +2 | tr '\t' ',' >${temp}"tmp5.cont"
 
 while read line; do
-    echo "INSERT INTO "${DB}".ARMADO (OPERACION_REFERENCIA_AR,ID_ARTICULO_AR,CANTIDAD_CST) VALUES("${OPERACION}","${line}");" >>""${temp}"grabar.cont"
+    echo "INSERT INTO "${DB}".ARMADO (OPERACION_REFERENCIA_AR,ID_ARTICULO_AR,CANTIDAD_CST,CANTIDAD_AR) VALUES("${OPERACION}","${line}",0);" >>""${temp}"grabar.cont"
 done<${temp}"tmp5.cont"
 
 bash ${scr}"transaccion.sh" ""${temp}"grabar.cont" 
