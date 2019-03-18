@@ -183,19 +183,19 @@ FECHA="$(mysql -u "${user}" --password="${pass}" --execute="SELECT DISTINCT (COM
 FECHA_CARGA="${seleccion}"
 
 
- # CREACION DE LA ORDEN DE CARGA
+#  # CREACION DE LA ORDEN DE CARGA
 
     
-echo -e "ORDEN DE CARGA CON FECHA: "${FECHA}" A CARGO DE RODRIGO LATORRE\n\n" >${temp}"tmp2.dist"
+# echo -e "ORDEN DE CARGA CON FECHA: "${FECHA}" A CARGO DE RODRIGO LATORRE\n\n" >${temp}"tmp2.dist"
 
-mysql -u "${user}" --password="${pass}" --execute="SELECT DENOMINACION AS CLIENTE,BULTOS,LOCACIONES AS UBICACION FROM "${DB}".SOLICITUDES JOIN("${DB}".CLIENTE,"${DB}".OPERACIONES,"${DB}".BULTOS,"${DB}".LOCALIZACION_PEDIDO,"${DB}".LOCALIDAD,"${DB}".LOCACIONES_DEPOSITO) ON("${DB}".SOLICITUDES.REFERENCIA="${DB}".OPERACIONES.opID AND "${DB}".OPERACIONES.INTERESADO="${DB}".CLIENTE.clID AND "${DB}".SOLICITUDES.REFERENCIA="${DB}".BULTOS.OPERACION_REF AND "${DB}".SOLICITUDES.REFERENCIA="${DB}".LOCALIZACION_PEDIDO.OPERACION_REF AND "${DB}".LOCALIDAD.lcID="${DB}".CLIENTE.LOCALIDAD AND "${DB}".LOCACIONES_DEPOSITO.locdepID="${DB}".LOCALIZACION_PEDIDO.LOCALIZACION) WHERE CLASE="${OPERACION}" AND COMIENZO='${seleccion}' AND REALIZACION IS NULL ORDER BY cp_lc DESC;" | column -t -s $'\t'>>${temp}"tmp2.dist"
+# mysql -u "${user}" --password="${pass}" --execute="SELECT DENOMINACION AS CLIENTE,BULTOS,LOCACIONES AS UBICACION FROM "${DB}".SOLICITUDES JOIN("${DB}".CLIENTE,"${DB}".OPERACIONES,"${DB}".BULTOS,"${DB}".LOCALIZACION_PEDIDO,"${DB}".LOCALIDAD,"${DB}".LOCACIONES_DEPOSITO) ON("${DB}".SOLICITUDES.REFERENCIA="${DB}".OPERACIONES.opID AND "${DB}".OPERACIONES.INTERESADO="${DB}".CLIENTE.clID AND "${DB}".SOLICITUDES.REFERENCIA="${DB}".BULTOS.OPERACION_REF AND "${DB}".SOLICITUDES.REFERENCIA="${DB}".LOCALIZACION_PEDIDO.OPERACION_REF AND "${DB}".LOCALIDAD.lcID="${DB}".CLIENTE.LOCALIDAD AND "${DB}".LOCACIONES_DEPOSITO.locdepID="${DB}".LOCALIZACION_PEDIDO.LOCALIZACION) WHERE CLASE="${OPERACION}" AND COMIENZO='${seleccion}' AND REALIZACION IS NULL ORDER BY cp_lc DESC;" | column -t -s $'\t'>>${temp}"tmp2.dist"
 
 
-cp ${temp}"tmp2.dist" ${temp}"tmp2b.dist"
+# cp ${temp}"tmp2.dist" ${temp}"tmp2b.dist"
 
-cat ${temp}"tmp2b.dist" | column -t -s $'\t' >${temp}"tmp2.dist"
+# cat ${temp}"tmp2b.dist" | column -t -s $'\t' >${temp}"tmp2.dist"
 
-sed -i G s/// ${temp}"tmp2.dist" 
+# sed -i G s/// ${temp}"tmp2.dist" 
 
 
 # CREACION DE LA HOJA DE RUTA
@@ -203,13 +203,13 @@ sed -i G s/// ${temp}"tmp2.dist"
 
 echo "__________________________________________________________________________________________" >${temp}"tmp3.dist"
 
-echo -e "HOJA DE RUTA CON FECHA: "${FECHA}" A CARGO DE RODRIGO LATORRE\n\n" >>${temp}"tmp3.dist"
+echo -e "HOJA DE RUTA CON FECHA: "${FECHA}" A CARGO DE RODRIGO LATORRE\n\n" >${temp}"tmp4.dist"
 
-mysql -u "${user}" --password="${pass}" --execute="SELECT DENOMINACION AS CLIENTE,opID AS REMITO,DIRECCION,estaf_lc AS LOCALIDAD,HORARIO FROM "${DB}".SOLICITUDES JOIN("${DB}".CLIENTE,"${DB}".OPERACIONES,"${DB}".BULTOS,"${DB}".LOCALIZACION_PEDIDO,"${DB}".LOCALIDAD,"${DB}".LOCACIONES_DEPOSITO) ON("${DB}".SOLICITUDES.REFERENCIA="${DB}".OPERACIONES.opID AND "${DB}".OPERACIONES.INTERESADO="${DB}".CLIENTE.clID AND "${DB}".SOLICITUDES.REFERENCIA="${DB}".BULTOS.OPERACION_REF AND "${DB}".SOLICITUDES.REFERENCIA="${DB}".LOCALIZACION_PEDIDO.OPERACION_REF AND "${DB}".LOCALIDAD.lcID="${DB}".CLIENTE.LOCALIDAD AND "${DB}".LOCACIONES_DEPOSITO.locdepID="${DB}".LOCALIZACION_PEDIDO.LOCALIZACION) WHERE CLASE="${OPERACION}" AND COMIENZO='${seleccion}' AND REALIZACION IS NULL ORDER BY cp_lc DESC;" | column -t -s $'\t'>>${temp}"tmp3.dist"
+mysql -u "${user}" --password="${pass}" --execute="SELECT DENOMINACION AS CLIENTE,BULTOS,opID AS REMITO,DIRECCION,estaf_lc AS LOCALIDAD,HORARIO FROM "${DB}".SOLICITUDES JOIN("${DB}".CLIENTE,"${DB}".OPERACIONES,"${DB}".BULTOS,"${DB}".LOCALIZACION_PEDIDO,"${DB}".LOCALIDAD,"${DB}".LOCACIONES_DEPOSITO) ON("${DB}".SOLICITUDES.REFERENCIA="${DB}".OPERACIONES.opID AND "${DB}".OPERACIONES.INTERESADO="${DB}".CLIENTE.clID AND "${DB}".SOLICITUDES.REFERENCIA="${DB}".BULTOS.OPERACION_REF AND "${DB}".SOLICITUDES.REFERENCIA="${DB}".LOCALIZACION_PEDIDO.OPERACION_REF AND "${DB}".LOCALIDAD.lcID="${DB}".CLIENTE.LOCALIDAD AND "${DB}".LOCACIONES_DEPOSITO.locdepID="${DB}".LOCALIZACION_PEDIDO.LOCALIZACION) WHERE CLASE="${OPERACION}" AND COMIENZO='${seleccion}' AND REALIZACION IS NULL ORDER BY cp_lc DESC;" | sed 's/tx2//' | column -t -s $'\t'>>${temp}"tmp4.dist"
 
 
 
-cat ${temp}"tmp3.dist" | column -t -s $'\t' >${temp}"tmp4.dist"
+#cat ${temp}"tmp3.dist" | column -t -s $'\t' >${temp}"CARGA.dist"
 
 
 
@@ -217,18 +217,18 @@ sed -i G s/// ${temp}"tmp4.dist"
 
 
 
-FECHA="$(cat ${temp}"tmp4.dist")"
+# FECHA="$(cat ${temp}"tmp4.dist")"
 
-CONTADOR="$(cat ${temp}"tmp2.dist")"
+# #CONTADOR="$(cat ${temp}"tmp2.dist")"
 
-echo "${CONTADOR}" >${temp}"CARGA.dist" 
-
-
-echo "${FECHA}" >>${temp}"CARGA.dist" 
+# echo "${CONTADOR}" >${temp}"CARGA.dist" 
 
 
+# echo "${FECHA}" >>${temp}"CARGA.dist" 
 
-enscript -B ${temp}"CARGA.dist" -M A4 -p ${REPARTO}"/carga.eps"
+
+
+enscript -B ${temp}"tmp4.dist" -M A4 -p ${REPARTO}"/carga.eps"
 
 
 
