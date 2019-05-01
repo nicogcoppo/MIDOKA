@@ -169,8 +169,21 @@ set xtics rotate
 
 plot "./RESULTADOS.dat" using 0:(($2-$3-$4-$5-$6-$7-$8-$9)/$2)*100:xticlabels(1) ti "Utilidad" w l,"" using 0:($3/$2)*100 ti "Mercaderias" w l,"" using 0:($4/$2)*100 ti "Perdidas" w l,"" using 0:($5/$2)*100 ti "Comisiones" w l,"" using 0:($6/$2)*100 ti "Fijos" w l,"" using 0:($7/$2)*100 ti "Movilidad" w l,"" using 0:($8/$2)*100 ti "Insumos" w l,"" using 0:($9/$2)*100 ti "Pablo" w l
 
+
+
 ## /////////////////////////////////////////////////////////////
 
+set title "PATRIMONIO"
+
+set xlabel "MES"
+
+set ylabel "MONTO ($)"
+
+set yrange [0:1200000]
+
+set xtics rotate
+
+plot "./patrimonio.dat" using 0:($2+$3-$4+$5):xticlabels(1) ti "Patrimonio" w l,"" using 0:($2) ti "Stock" w l,"" using 0:($3) ti "Clientes" w l,"" using 0:($4) ti "Proveedores" w l,"" using 0:($5) ti "Liquidez" w l 
 
 
 ##################### MANTENIMIENTO ###################
