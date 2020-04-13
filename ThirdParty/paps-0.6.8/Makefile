@@ -103,14 +103,14 @@ DIST_ARCHIVES = $(distdir).tar.gz
 GZIP_ENV = --best
 distuninstallcheck_listfiles = find . -type f -print
 distcleancheck_listfiles = find . -type f -print
-ACLOCAL = ${SHELL} /home/nico/_ORG/PLAY-COLOR/MIDOKA_PGC_GITHUB/midokaPgcGitHub/ThirdParty/paps-0.6.8/missing --run aclocal-1.9
+ACLOCAL = ${SHELL} /home/nico/_org/MIDOKA/ThirdParty/paps-0.6.8/missing --run aclocal-1.9
 AMDEP_FALSE = #
 AMDEP_TRUE = 
-AMTAR = ${SHELL} /home/nico/_ORG/PLAY-COLOR/MIDOKA_PGC_GITHUB/midokaPgcGitHub/ThirdParty/paps-0.6.8/missing --run tar
+AMTAR = ${SHELL} /home/nico/_org/MIDOKA/ThirdParty/paps-0.6.8/missing --run tar
 AR = ar
-AUTOCONF = ${SHELL} /home/nico/_ORG/PLAY-COLOR/MIDOKA_PGC_GITHUB/midokaPgcGitHub/ThirdParty/paps-0.6.8/missing --run autoconf
-AUTOHEADER = ${SHELL} /home/nico/_ORG/PLAY-COLOR/MIDOKA_PGC_GITHUB/midokaPgcGitHub/ThirdParty/paps-0.6.8/missing --run autoheader
-AUTOMAKE = ${SHELL} /home/nico/_ORG/PLAY-COLOR/MIDOKA_PGC_GITHUB/midokaPgcGitHub/ThirdParty/paps-0.6.8/missing --run automake-1.9
+AUTOCONF = ${SHELL} /home/nico/_org/MIDOKA/ThirdParty/paps-0.6.8/missing --run autoconf
+AUTOHEADER = ${SHELL} /home/nico/_org/MIDOKA/ThirdParty/paps-0.6.8/missing --run autoheader
+AUTOMAKE = ${SHELL} /home/nico/_org/MIDOKA/ThirdParty/paps-0.6.8/missing --run automake-1.9
 AWK = gawk
 CC = gcc
 CCDEPMODE = depmode=gcc3
@@ -129,12 +129,12 @@ DX_COND_chi_FALSE =
 DX_COND_chi_TRUE = #
 DX_COND_chm_FALSE = 
 DX_COND_chm_TRUE = #
-DX_COND_doc_FALSE = #
-DX_COND_doc_TRUE = 
-DX_COND_dot_FALSE = #
-DX_COND_dot_TRUE = 
-DX_COND_html_FALSE = #
-DX_COND_html_TRUE = 
+DX_COND_doc_FALSE = 
+DX_COND_doc_TRUE = #
+DX_COND_dot_FALSE = 
+DX_COND_dot_TRUE = #
+DX_COND_html_FALSE = 
+DX_COND_html_TRUE = #
 DX_COND_latex_FALSE = 
 DX_COND_latex_TRUE = #
 DX_COND_man_FALSE = 
@@ -149,16 +149,16 @@ DX_COND_xml_FALSE =
 DX_COND_xml_TRUE = #
 DX_CONFIG = doxygen.cfg
 DX_DOCDIR = doxygen-doc
-DX_DOT = /usr/bin/dot
-DX_DOXYGEN = /usr/bin/doxygen
+DX_DOT = 
+DX_DOXYGEN = 
 DX_DVIPS = 
 DX_EGREP = 
-DX_ENV =  SRCDIR='.' PROJECT='libpaps' DOCDIR='doxygen-doc' VERSION='0.6.8' PERL_PATH='/usr/bin/perl' HAVE_DOT='YES' DOT_PATH='/usr/bin' GENERATE_MAN='NO' GENERATE_RTF='NO' GENERATE_XML='NO' GENERATE_HTMLHELP='NO' GENERATE_CHI='NO' GENERATE_HTML='YES' GENERATE_LATEX='NO'
+DX_ENV =  SRCDIR='.' PROJECT='libpaps' DOCDIR='doxygen-doc' VERSION='0.6.8' HAVE_DOT='NO' GENERATE_MAN='NO' GENERATE_RTF='NO' GENERATE_XML='NO' GENERATE_HTMLHELP='NO' GENERATE_CHI='NO' GENERATE_HTML='NO' GENERATE_LATEX='NO'
 DX_FLAG_chi = 0
 DX_FLAG_chm = 0
-DX_FLAG_doc = 1
-DX_FLAG_dot = 1
-DX_FLAG_html = 1
+DX_FLAG_doc = 0
+DX_FLAG_dot = 0
+DX_FLAG_html = 0
 DX_FLAG_man = 0
 DX_FLAG_pdf = 0
 DX_FLAG_ps = 0
@@ -176,8 +176,8 @@ ECHO_N = -n
 ECHO_T = 
 EGREP = grep -E
 EXEEXT = 
-F77 = f77
-FFLAGS = -g -O2
+F77 = 
+FFLAGS = 
 INSTALL_DATA = ${INSTALL} -m 644
 INSTALL_PROGRAM = ${INSTALL}
 INSTALL_SCRIPT = ${INSTALL}
@@ -188,7 +188,7 @@ LIBS =
 LIBTOOL = $(SHELL) $(top_builddir)/libtool
 LN_S = ln -s
 LTLIBOBJS = 
-MAKEINFO = ${SHELL} /home/nico/_ORG/PLAY-COLOR/MIDOKA_PGC_GITHUB/midokaPgcGitHub/ThirdParty/paps-0.6.8/missing --run makeinfo
+MAKEINFO = ${SHELL} /home/nico/_org/MIDOKA/ThirdParty/paps-0.6.8/missing --run makeinfo
 OBJEXT = o
 PACKAGE = paps
 PACKAGE_BUGREPORT = 
@@ -206,11 +206,11 @@ VERSION = 0.6.8
 ac_ct_AR = ar
 ac_ct_CC = gcc
 ac_ct_CXX = g++
-ac_ct_F77 = f77
+ac_ct_F77 = 
 ac_ct_RANLIB = ranlib
 ac_ct_STRIP = strip
-ac_pt_DX_DOT = /usr/bin/dot
-ac_pt_DX_DOXYGEN = /usr/bin/doxygen
+ac_pt_DX_DOT = 
+ac_pt_DX_DOXYGEN = 
 ac_pt_DX_DVIPS = 
 ac_pt_DX_EGREP = 
 ac_pt_DX_HHC = 
@@ -242,7 +242,7 @@ host_os = linux-gnu
 host_vendor = unknown
 includedir = ${prefix}/include
 infodir = ${prefix}/info
-install_sh = /home/nico/_ORG/PLAY-COLOR/MIDOKA_PGC_GITHUB/midokaPgcGitHub/ThirdParty/paps-0.6.8/install-sh
+install_sh = /home/nico/_org/MIDOKA/ThirdParty/paps-0.6.8/install-sh
 libdir = ${exec_prefix}/lib
 libexecdir = ${exec_prefix}/libexec
 localstatedir = ${prefix}/var
@@ -256,29 +256,29 @@ sharedstatedir = ${prefix}/com
 sysconfdir = ${prefix}/etc
 target_alias = 
 SUBDIRS = src 
-DX_CLEAN_HTML = doxygen-doc/html
-#DX_CLEAN_CHM = doxygen-doc/chm
-##DX_CLEAN_CHI = doxygen-doc/paps.chi
-#DX_CLEAN_MAN = doxygen-doc/man
-#DX_CLEAN_RTF = doxygen-doc/rtf
-#DX_CLEAN_XML = doxygen-doc/xml
-#DX_CLEAN_PS = doxygen-doc/paps.ps
-#DX_PS_GOAL = doxygen-ps
-#DX_CLEAN_PDF = doxygen-doc/paps.pdf
-#DX_PDF_GOAL = doxygen-pdf
-#DX_CLEAN_LATEX = doxygen-doc/latex
-DX_CLEANFILES = \
-    doxygen-doc/paps.tag \
-    -r \
-    $(DX_CLEAN_HTML) \
-    $(DX_CLEAN_CHM) \
-    $(DX_CLEAN_CHI) \
-    $(DX_CLEAN_MAN) \
-    $(DX_CLEAN_RTF) \
-    $(DX_CLEAN_XML) \
-    $(DX_CLEAN_PS) \
-    $(DX_CLEAN_PDF) \
-    $(DX_CLEAN_LATEX)
+##DX_CLEAN_HTML = doxygen-doc/html
+##DX_CLEAN_CHM = doxygen-doc/chm
+###DX_CLEAN_CHI = doxygen-doc/paps.chi
+##DX_CLEAN_MAN = doxygen-doc/man
+##DX_CLEAN_RTF = doxygen-doc/rtf
+##DX_CLEAN_XML = doxygen-doc/xml
+##DX_CLEAN_PS = doxygen-doc/paps.ps
+##DX_PS_GOAL = doxygen-ps
+##DX_CLEAN_PDF = doxygen-doc/paps.pdf
+##DX_PDF_GOAL = doxygen-pdf
+##DX_CLEAN_LATEX = doxygen-doc/latex
+#DX_CLEANFILES = \
+#    doxygen-doc/paps.tag \
+#    -r \
+#    $(DX_CLEAN_HTML) \
+#    $(DX_CLEAN_CHM) \
+#    $(DX_CLEAN_CHI) \
+#    $(DX_CLEAN_MAN) \
+#    $(DX_CLEAN_RTF) \
+#    $(DX_CLEAN_XML) \
+#    $(DX_CLEAN_PS) \
+#    $(DX_CLEAN_PDF) \
+#    $(DX_CLEAN_LATEX)
 
 EXTRA_DIST = autogen.sh $(DX_CONFIG) doxygen-doc/html
 all: config.h
@@ -717,51 +717,51 @@ uninstall-info: uninstall-info-recursive
 	tags tags-recursive uninstall uninstall-am uninstall-info-am
 
 
-#doxygen-ps: doxygen-doc/paps.ps
+##doxygen-ps: doxygen-doc/paps.ps
 
-#doxygen-doc/paps.ps: doxygen-doc/paps.tag
-#	cd doxygen-doc/latex; \
-#	rm -f *.aux *.toc *.idx *.ind *.ilg *.log *.out; \
-#	$(DX_LATEX) refman.tex; \
-#	$(MAKEINDEX_PATH) refman.idx; \
-#	$(DX_LATEX) refman.tex; \
-#	countdown=5; \
-#	while $(DX_EGREP) 'Rerun (LaTeX|to get cross-references right)' \
-#	                  refman.log > /dev/null 2>&1 \
-#	   && test $$countdown -gt 0; do \
-#	    $(DX_LATEX) refman.tex; \
-#	    countdown=`expr $$countdown - 1`; \
-#	done; \
-#	$(DX_DVIPS) -o ../paps.ps refman.dvi
+##doxygen-doc/paps.ps: doxygen-doc/paps.tag
+##	cd doxygen-doc/latex; \
+##	rm -f *.aux *.toc *.idx *.ind *.ilg *.log *.out; \
+##	$(DX_LATEX) refman.tex; \
+##	$(MAKEINDEX_PATH) refman.idx; \
+##	$(DX_LATEX) refman.tex; \
+##	countdown=5; \
+##	while $(DX_EGREP) 'Rerun (LaTeX|to get cross-references right)' \
+##	                  refman.log > /dev/null 2>&1 \
+##	   && test $$countdown -gt 0; do \
+##	    $(DX_LATEX) refman.tex; \
+##	    countdown=`expr $$countdown - 1`; \
+##	done; \
+##	$(DX_DVIPS) -o ../paps.ps refman.dvi
 
-#doxygen-pdf: doxygen-doc/paps.pdf
+##doxygen-pdf: doxygen-doc/paps.pdf
 
-#doxygen-doc/paps.pdf: doxygen-doc/paps.tag
-#	cd doxygen-doc/latex; \
-#	rm -f *.aux *.toc *.idx *.ind *.ilg *.log *.out; \
-#	$(DX_PDFLATEX) refman.tex; \
-#	$(DX_MAKEINDEX) refman.idx; \
-#	$(DX_PDFLATEX) refman.tex; \
-#	countdown=5; \
-#	while $(DX_EGREP) 'Rerun (LaTeX|to get cross-references right)' \
-#	                  refman.log > /dev/null 2>&1 \
-#	   && test $$countdown -gt 0; do \
-#	    $(DX_PDFLATEX) refman.tex; \
-#	    countdown=`expr $$countdown - 1`; \
-#	done; \
-#	mv refman.pdf ../paps.pdf
+##doxygen-doc/paps.pdf: doxygen-doc/paps.tag
+##	cd doxygen-doc/latex; \
+##	rm -f *.aux *.toc *.idx *.ind *.ilg *.log *.out; \
+##	$(DX_PDFLATEX) refman.tex; \
+##	$(DX_MAKEINDEX) refman.idx; \
+##	$(DX_PDFLATEX) refman.tex; \
+##	countdown=5; \
+##	while $(DX_EGREP) 'Rerun (LaTeX|to get cross-references right)' \
+##	                  refman.log > /dev/null 2>&1 \
+##	   && test $$countdown -gt 0; do \
+##	    $(DX_PDFLATEX) refman.tex; \
+##	    countdown=`expr $$countdown - 1`; \
+##	done; \
+##	mv refman.pdf ../paps.pdf
 
-.PHONY: doxygen-run doxygen-doc $(DX_PS_GOAL) $(DX_PDF_GOAL)
+#.PHONY: doxygen-run doxygen-doc $(DX_PS_GOAL) $(DX_PDF_GOAL)
 
-.INTERMEDIATE: doxygen-run $(DX_PS_GOAL) $(DX_PDF_GOAL)
+#.INTERMEDIATE: doxygen-run $(DX_PS_GOAL) $(DX_PDF_GOAL)
 
-doxygen-run: doxygen-doc/paps.tag
+#doxygen-run: doxygen-doc/paps.tag
 
-doxygen-doc: doxygen-run $(DX_PS_GOAL) $(DX_PDF_GOAL)
+#doxygen-doc: doxygen-run $(DX_PS_GOAL) $(DX_PDF_GOAL)
 
-doxygen-doc/paps.tag: $(DX_CONFIG) $(pkginclude_HEADERS)
-	rm -rf doxygen-doc
-	$(DX_ENV) $(DX_DOXYGEN) $(srcdir)/$(DX_CONFIG)
+#doxygen-doc/paps.tag: $(DX_CONFIG) $(pkginclude_HEADERS)
+#	rm -rf doxygen-doc
+#	$(DX_ENV) $(DX_DOXYGEN) $(srcdir)/$(DX_CONFIG)
 # Tell versions [3.59,3.63) of GNU make to not export all variables.
 # Otherwise a system limit (for SysV at least) may be exceeded.
 .NOEXPORT:

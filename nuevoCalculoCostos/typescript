@@ -1,0 +1,510 @@
+Script iniciado (mar 07 abr 2020 12:26:35 -03
+)find: ‘./Descargas’: No existe el fichero o el directorio
+kill: uso: kill [-s id_señal | -n num_señal | -id_señal] pid | idtrabajo ... ó kill -l [id_señal]
+kill: uso: kill [-s id_señal | -n num_señal | -id_señal] pid | idtrabajo ... ó kill -l [id_señal]
+kill: uso: kill [-s id_señal | -n num_señal | -id_señal] pid | idtrabajo ... ó kill -l [id_señal]
+kill: uso: kill [-s id_señal | -n num_señal | -id_señal] pid | idtrabajo ... ó kill -l [id_señal]
+kill: uso: kill [-s id_señal | -n num_señal | -id_señal] pid | idtrabajo ... ó kill -l [id_señal]
+nico@debianThinkpadx230:~/_org/MIDOKA/nuevoCalculoCostos$ bash -o xtrace informePatrimonial.sh
++ user=nico
++ pass=macaco12
++ DB=MIDOKA_PGC_B
++ resultados=8449
++ mysql -u nico --password=macaco12 '--execute=USE MIDOKA_PGC_B;SELECT FECHA FROM CONTABLES WHERE TIPO_REGISTRO=5 AND FECHA >='\''2019-01-01'\'' ORDER BY FECHA ASC;'
++ tail -n +2
+++ wc -l /tmp/patrimonio.dat
+++ awk '{print $1}'
++ fechasTotal=31
++ (( i=1 ))
++ (( i<fechasTotal ))
+++ expr 1 + 1
++ sup=2
+++ sed '1q;d' /tmp/patrimonio.dat
++ Linf=2019-01-15
+++ sed '2q;d' /tmp/patrimonio.dat
++ Lsup=2019-01-22
++ cat ./calculoPatrimonial.sql
++ sed s/Linf/2019-01-15/g
++ sed s/Lsup/2019-01-22/g
++ test -f /tmp/8449
++ mysql -u nico --password=macaco12
++ head -1
++ tr '\t' ';'
++ mysql -u nico --password=macaco12
++ tail -n +2
++ tr . ,
++ tr '\t' ';'
++ (( i++ ))
++ (( i<fechasTotal ))
+++ expr 2 + 1
++ sup=3
+++ sed '2q;d' /tmp/patrimonio.dat
++ Linf=2019-01-22
+++ sed '3q;d' /tmp/patrimonio.dat
++ Lsup=2019-01-31
++ cat ./calculoPatrimonial.sql
++ sed s/Linf/2019-01-22/g
++ sed s/Lsup/2019-01-31/g
++ test -f /tmp/8449
++ mysql -u nico --password=macaco12
++ tr '\t' ';'
++ tail -n +2
++ tr . ,
++ (( i++ ))
++ (( i<fechasTotal ))
+++ expr 3 + 1
++ sup=4
+++ sed '3q;d' /tmp/patrimonio.dat
++ Linf=2019-01-31
+++ sed '4q;d' /tmp/patrimonio.dat
++ Lsup=2019-02-15
++ cat ./calculoPatrimonial.sql
++ sed s/Linf/2019-01-31/g
++ sed s/Lsup/2019-02-15/g
++ test -f /tmp/8449
++ mysql -u nico --password=macaco12
++ tail -n +2
++ tr '\t' ';'
++ tr . ,
++ (( i++ ))
++ (( i<fechasTotal ))
+++ expr 4 + 1
++ sup=5
+++ sed '4q;d' /tmp/patrimonio.dat
++ Linf=2019-02-15
+++ sed '5q;d' /tmp/patrimonio.dat
++ Lsup=2019-02-28
++ cat ./calculoPatrimonial.sql
++ sed s/Linf/2019-02-15/g
++ sed s/Lsup/2019-02-28/g
++ test -f /tmp/8449
++ mysql -u nico --password=macaco12
++ tail -n +2
++ tr '\t' ';'
++ tr . ,
++ (( i++ ))
++ (( i<fechasTotal ))
+++ expr 5 + 1
++ sup=6
+++ sed '5q;d' /tmp/patrimonio.dat
++ Linf=2019-02-28
+++ sed '6q;d' /tmp/patrimonio.dat
++ Lsup=2019-03-15
++ cat ./calculoPatrimonial.sql
++ sed s/Linf/2019-02-28/g
++ sed s/Lsup/2019-03-15/g
++ test -f /tmp/8449
++ mysql -u nico --password=macaco12
++ tail -n +2
++ tr '\t' ';'
++ tr . ,
++ (( i++ ))
++ (( i<fechasTotal ))
+++ expr 6 + 1
++ sup=7
+++ sed '6q;d' /tmp/patrimonio.dat
++ Linf=2019-03-15
+++ sed '7q;d' /tmp/patrimonio.dat
++ Lsup=2019-03-31
++ cat ./calculoPatrimonial.sql
++ sed s/Linf/2019-03-15/g
++ sed s/Lsup/2019-03-31/g
++ test -f /tmp/8449
++ mysql -u nico --password=macaco12
++ tail -n +2
++ tr . ,
++ tr '\t' ';'
++ (( i++ ))
++ (( i<fechasTotal ))
+++ expr 7 + 1
++ sup=8
+++ sed '7q;d' /tmp/patrimonio.dat
++ Linf=2019-03-31
+++ sed '8q;d' /tmp/patrimonio.dat
++ Lsup=2019-04-15
++ cat ./calculoPatrimonial.sql
++ sed s/Linf/2019-03-31/g
++ sed s/Lsup/2019-04-15/g
++ test -f /tmp/8449
++ mysql -u nico --password=macaco12
++ tail -n +2
++ tr '\t' ';'
++ tr . ,
++ (( i++ ))
++ (( i<fechasTotal ))
+++ expr 8 + 1
++ sup=9
+++ sed '8q;d' /tmp/patrimonio.dat
++ Linf=2019-04-15
+++ sed '9q;d' /tmp/patrimonio.dat
++ Lsup=2019-04-30
++ cat ./calculoPatrimonial.sql
++ sed s/Linf/2019-04-15/g
++ sed s/Lsup/2019-04-30/g
++ test -f /tmp/8449
++ mysql -u nico --password=macaco12
++ tail -n +2
++ tr '\t' ';'
++ tr . ,
++ (( i++ ))
++ (( i<fechasTotal ))
+++ expr 9 + 1
++ sup=10
+++ sed '9q;d' /tmp/patrimonio.dat
++ Linf=2019-04-30
+++ sed '10q;d' /tmp/patrimonio.dat
++ Lsup=2019-05-01
++ cat ./calculoPatrimonial.sql
++ sed s/Linf/2019-04-30/g
++ sed s/Lsup/2019-05-01/g
++ test -f /tmp/8449
++ mysql -u nico --password=macaco12
++ tail -n +2
++ tr '\t' ';'
++ tr . ,
++ (( i++ ))
++ (( i<fechasTotal ))
+++ expr 10 + 1
++ sup=11
+++ sed '10q;d' /tmp/patrimonio.dat
++ Linf=2019-05-01
+++ sed '11q;d' /tmp/patrimonio.dat
++ Lsup=2019-05-15
++ cat ./calculoPatrimonial.sql
++ sed s/Linf/2019-05-01/g
++ sed s/Lsup/2019-05-15/g
++ test -f /tmp/8449
++ mysql -u nico --password=macaco12
++ tail -n +2
++ tr '\t' ';'
++ tr . ,
++ (( i++ ))
++ (( i<fechasTotal ))
+++ expr 11 + 1
++ sup=12
+++ sed '11q;d' /tmp/patrimonio.dat
++ Linf=2019-05-15
+++ sed '12q;d' /tmp/patrimonio.dat
++ Lsup=2019-05-31
++ cat ./calculoPatrimonial.sql
++ sed s/Linf/2019-05-15/g
++ sed s/Lsup/2019-05-31/g
++ test -f /tmp/8449
++ mysql -u nico --password=macaco12
++ tail -n +2
++ tr . ,
++ tr '\t' ';'
++ (( i++ ))
++ (( i<fechasTotal ))
+++ expr 12 + 1
++ sup=13
+++ sed '12q;d' /tmp/patrimonio.dat
++ Linf=2019-05-31
+++ sed '13q;d' /tmp/patrimonio.dat
++ Lsup=2019-06-15
++ cat ./calculoPatrimonial.sql
++ sed s/Linf/2019-05-31/g
++ sed s/Lsup/2019-06-15/g
++ test -f /tmp/8449
++ mysql -u nico --password=macaco12
++ tail -n +2
++ tr . ,
++ tr '\t' ';'
++ (( i++ ))
++ (( i<fechasTotal ))
+++ expr 13 + 1
++ sup=14
+++ sed '13q;d' /tmp/patrimonio.dat
++ Linf=2019-06-15
+++ sed '14q;d' /tmp/patrimonio.dat
++ Lsup=2019-06-30
++ cat ./calculoPatrimonial.sql
++ sed s/Linf/2019-06-15/g
++ sed s/Lsup/2019-06-30/g
++ test -f /tmp/8449
++ mysql -u nico --password=macaco12
++ tail -n +2
++ tr . ,
++ tr '\t' ';'
++ (( i++ ))
++ (( i<fechasTotal ))
+++ expr 14 + 1
++ sup=15
+++ sed '14q;d' /tmp/patrimonio.dat
++ Linf=2019-06-30
+++ sed '15q;d' /tmp/patrimonio.dat
++ Lsup=2019-07-15
++ cat ./calculoPatrimonial.sql
++ sed s/Linf/2019-06-30/g
++ sed s/Lsup/2019-07-15/g
++ test -f /tmp/8449
++ mysql -u nico --password=macaco12
++ tail -n +2
++ tr '\t' ';'
++ tr . ,
++ (( i++ ))
++ (( i<fechasTotal ))
+++ expr 15 + 1
++ sup=16
+++ sed '15q;d' /tmp/patrimonio.dat
++ Linf=2019-07-15
+++ sed '16q;d' /tmp/patrimonio.dat
++ Lsup=2019-07-31
++ cat ./calculoPatrimonial.sql
++ sed s/Linf/2019-07-15/g
++ sed s/Lsup/2019-07-31/g
++ test -f /tmp/8449
++ mysql -u nico --password=macaco12
++ tr '\t' ';'
++ tail -n +2
++ tr . ,
++ (( i++ ))
++ (( i<fechasTotal ))
+++ expr 16 + 1
++ sup=17
+++ sed '16q;d' /tmp/patrimonio.dat
++ Linf=2019-07-31
+++ sed '17q;d' /tmp/patrimonio.dat
++ Lsup=2019-08-15
++ cat ./calculoPatrimonial.sql
++ sed s/Linf/2019-07-31/g
++ sed s/Lsup/2019-08-15/g
++ test -f /tmp/8449
++ mysql -u nico --password=macaco12
++ tail -n +2
++ tr . ,
++ tr '\t' ';'
++ (( i++ ))
++ (( i<fechasTotal ))
+++ expr 17 + 1
++ sup=18
+++ sed '17q;d' /tmp/patrimonio.dat
++ Linf=2019-08-15
+++ sed '18q;d' /tmp/patrimonio.dat
++ Lsup=2019-08-31
++ cat ./calculoPatrimonial.sql
++ sed s/Linf/2019-08-15/g
++ sed s/Lsup/2019-08-31/g
++ test -f /tmp/8449
++ mysql -u nico --password=macaco12
++ tail -n +2
++ tr '\t' ';'
++ tr . ,
++ (( i++ ))
++ (( i<fechasTotal ))
+++ expr 18 + 1
++ sup=19
+++ sed '18q;d' /tmp/patrimonio.dat
++ Linf=2019-08-31
+++ sed '19q;d' /tmp/patrimonio.dat
++ Lsup=2019-09-01
++ cat ./calculoPatrimonial.sql
++ sed s/Linf/2019-08-31/g
++ sed s/Lsup/2019-09-01/g
++ test -f /tmp/8449
++ mysql -u nico --password=macaco12
++ tail -n +2
++ tr . ,
++ tr '\t' ';'
++ (( i++ ))
++ (( i<fechasTotal ))
+++ expr 19 + 1
++ sup=20
+++ sed '19q;d' /tmp/patrimonio.dat
++ Linf=2019-09-01
+++ sed '20q;d' /tmp/patrimonio.dat
++ Lsup=2019-09-15
++ cat ./calculoPatrimonial.sql
++ sed s/Linf/2019-09-01/g
++ sed s/Lsup/2019-09-15/g
++ test -f /tmp/8449
++ mysql -u nico --password=macaco12
++ tail -n +2
++ tr '\t' ';'
++ tr . ,
++ (( i++ ))
++ (( i<fechasTotal ))
+++ expr 20 + 1
++ sup=21
+++ sed '20q;d' /tmp/patrimonio.dat
++ Linf=2019-09-15
+++ sed '21q;d' /tmp/patrimonio.dat
++ Lsup=2019-09-30
++ cat ./calculoPatrimonial.sql
++ sed s/Linf/2019-09-15/g
++ sed s/Lsup/2019-09-30/g
++ test -f /tmp/8449
++ mysql -u nico --password=macaco12
++ tail -n +2
++ tr '\t' ';'
++ tr . ,
++ (( i++ ))
++ (( i<fechasTotal ))
+++ expr 21 + 1
++ sup=22
+++ sed '21q;d' /tmp/patrimonio.dat
++ Linf=2019-09-30
+++ sed '22q;d' /tmp/patrimonio.dat
++ Lsup=2019-10-15
++ cat ./calculoPatrimonial.sql
++ sed s/Linf/2019-09-30/g
++ sed s/Lsup/2019-10-15/g
++ test -f /tmp/8449
++ mysql -u nico --password=macaco12
++ tail -n +2
++ tr . ,
++ tr '\t' ';'
++ (( i++ ))
++ (( i<fechasTotal ))
+++ expr 22 + 1
++ sup=23
+++ sed '22q;d' /tmp/patrimonio.dat
++ Linf=2019-10-15
+++ sed '23q;d' /tmp/patrimonio.dat
++ Lsup=2019-10-31
++ cat ./calculoPatrimonial.sql
++ sed s/Linf/2019-10-15/g
++ sed s/Lsup/2019-10-31/g
++ test -f /tmp/8449
++ mysql -u nico --password=macaco12
++ tail -n +2
++ tr '\t' ';'
++ tr . ,
++ (( i++ ))
++ (( i<fechasTotal ))
+++ expr 23 + 1
++ sup=24
+++ sed '23q;d' /tmp/patrimonio.dat
++ Linf=2019-10-31
+++ sed '24q;d' /tmp/patrimonio.dat
++ Lsup=2019-11-15
++ cat ./calculoPatrimonial.sql
++ sed s/Linf/2019-10-31/g
++ sed s/Lsup/2019-11-15/g
++ test -f /tmp/8449
++ mysql -u nico --password=macaco12
++ tail -n +2
++ tr . ,
++ tr '\t' ';'
++ (( i++ ))
++ (( i<fechasTotal ))
+++ expr 24 + 1
++ sup=25
+++ sed '24q;d' /tmp/patrimonio.dat
++ Linf=2019-11-15
+++ sed '25q;d' /tmp/patrimonio.dat
++ Lsup=2019-11-30
++ cat ./calculoPatrimonial.sql
++ sed s/Linf/2019-11-15/g
++ sed s/Lsup/2019-11-30/g
++ test -f /tmp/8449
++ mysql -u nico --password=macaco12
++ tail -n +2
++ tr '\t' ';'
++ tr . ,
++ (( i++ ))
++ (( i<fechasTotal ))
+++ expr 25 + 1
++ sup=26
+++ sed '25q;d' /tmp/patrimonio.dat
++ Linf=2019-11-30
+++ sed '26q;d' /tmp/patrimonio.dat
++ Lsup=2019-12-15
++ cat ./calculoPatrimonial.sql
++ sed s/Linf/2019-11-30/g
++ sed s/Lsup/2019-12-15/g
++ test -f /tmp/8449
++ mysql -u nico --password=macaco12
++ tr '\t' ';'
++ tr . ,
++ tail -n +2
++ (( i++ ))
++ (( i<fechasTotal ))
+++ expr 26 + 1
++ sup=27
+++ sed '26q;d' /tmp/patrimonio.dat
++ Linf=2019-12-15
+++ sed '27q;d' /tmp/patrimonio.dat
++ Lsup=2019-12-31
++ cat ./calculoPatrimonial.sql
++ sed s/Linf/2019-12-15/g
++ sed s/Lsup/2019-12-31/g
++ test -f /tmp/8449
++ mysql -u nico --password=macaco12
++ tr '\t' ';'
++ tail -n +2
++ tr . ,
++ (( i++ ))
++ (( i<fechasTotal ))
+++ expr 27 + 1
++ sup=28
+++ sed '27q;d' /tmp/patrimonio.dat
++ Linf=2019-12-31
+++ sed '28q;d' /tmp/patrimonio.dat
++ Lsup=2020-01-15
++ sed s/Linf/2019-12-31/g
++ sed s/Lsup/2020-01-15/g
++ cat ./calculoPatrimonial.sql
++ test -f /tmp/8449
++ mysql -u nico --password=macaco12
++ tail -n +2
++ tr . ,
++ tr '\t' ';'
++ (( i++ ))
++ (( i<fechasTotal ))
+++ expr 28 + 1
++ sup=29
+++ sed '28q;d' /tmp/patrimonio.dat
++ Linf=2020-01-15
+++ sed '29q;d' /tmp/patrimonio.dat
++ Lsup=2020-02-15
++ cat ./calculoPatrimonial.sql
++ sed s/Linf/2020-01-15/g
++ sed s/Lsup/2020-02-15/g
++ test -f /tmp/8449
++ mysql -u nico --password=macaco12
++ tail -n +2
++ tr . ,
++ tr '\t' ';'
++ (( i++ ))
++ (( i<fechasTotal ))
+++ expr 29 + 1
++ sup=30
+++ sed '29q;d' /tmp/patrimonio.dat
++ Linf=2020-02-15
+++ sed '30q;d' /tmp/patrimonio.dat
++ Lsup=2020-02-28
++ cat ./calculoPatrimonial.sql
++ sed s/Linf/2020-02-15/g
++ sed s/Lsup/2020-02-28/g
++ test -f /tmp/8449
++ mysql -u nico --password=macaco12
++ tail -n +2
++ tr '\t' ';'
++ tr . ,
++ (( i++ ))
++ (( i<fechasTotal ))
+++ expr 30 + 1
++ sup=31
+++ sed '30q;d' /tmp/patrimonio.dat
++ Linf=2020-02-28
+++ sed '31q;d' /tmp/patrimonio.dat
++ Lsup=2020-02-29
++ cat ./calculoPatrimonial.sql
++ sed s/Linf/2020-02-28/g
++ sed s/Lsup/2020-02-29/g
++ test -f /tmp/8449
++ mysql -u nico --password=macaco12
++ tail -n +2
++ tr . ,
++ tr '\t' ';'
++ (( i++ ))
++ (( i<fechasTotal ))
++ rm ./patrimonio_8171.csv
++ cp /tmp/8449 ./patrimonio_32059.csv
++ exit 0
+nico@debianThinkpadx230:~/_org/MIDOKA/nuevoCalculoCostos$ exit
+exit
+
+Script terminado (mar 07 abr 2020 21:36:49 -03
+)

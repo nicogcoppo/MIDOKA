@@ -25,6 +25,12 @@ echo "Ingrese numero de operacion a descargar . . ."
 
 read OPERACION
 
+clear
+
+echo "Ingrese password . . ."
+
+read pass
+
 ######################## SCRIPT ############################
 
 echo -e "USE "${DB}"" >${TEMP}temp.sql
@@ -44,7 +50,7 @@ START TRANSACTION;" >>${TEMP}temp.sql
 CONTADOR=0
 for i in "${ARRAYB[@]}"; do
 
-    mysql -u nico -p --execute="USE "${DB}";SELECT * FROM "${i}" WHERE "${ARRAY_2B[${CONTADOR}]}"="${OPERACION}";" | tr '\t' '&' >${TEMP}tempa
+    mysql -u nico --password="$pass" --execute="USE "${DB}";SELECT * FROM "${i}" WHERE "${ARRAY_2B[${CONTADOR}]}"="${OPERACION}";" | tr '\t' '&' >${TEMP}tempa
 
     DERECHA=$(cat ${TEMP}tempa | tail -n +2 | sed "s/^/('/" | sed "s/$/');/" | sed "s/&/','/g" | sed "s/^(/INSERT INTO "${i}" VALUES(/")
 

@@ -20,9 +20,9 @@ declare -a DETALLES=("$SSHPASS" "scp" "wall")
 
 declare -r OPER_ID="${RANDOM}"
 
-declare -r RAIZ=""${HOME}"/_ORG/PLAY-COLOR/MIDOKA_PGC_GITHUB/midokaPgcGitHub/" #Reemplazar por el directorio de instalacion
+declare -r RAIZ=""${HOME}"/_org/MIDOKA/" #Reemplazar por el directorio de instalacion
 
-declare -r ACUMULADOR=""${HOME}"/_ORG/PLAY-COLOR/resguardosMidokaPgc/" #Reemplazar por el directorio de copias de seguridad
+declare -r ACUMULADOR=""${HOME}"/_org/playcolor/resguardosBaseDatos/" #Reemplazar por el directorio de copias de seguridad
 
 declare -r SERVER="root@66.97.37.139" #Reemplazar con el nombre del server
 

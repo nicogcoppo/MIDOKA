@@ -26,7 +26,7 @@ function instalar {
 
 	read DIA
 
-	mysql -u ${USER} --password="${pass}" -DMIDOKA_PGC_B <${HOME}/_ORG/PLAY-COLOR/resguardosMidokaPgc/2019-${MES}-${DIA}_${HOSTNAME}.sql && break
+	mysql -u ${USER} --password="${pass}" -DMIDOKA_PGC_B <${HOME}/_org/playcolor/resguardosBaseDatos/2020-${MES}-${DIA}_${HOSTNAME}.sql && break
 
 	clear
 	

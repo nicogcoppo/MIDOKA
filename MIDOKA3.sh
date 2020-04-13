@@ -1,4 +1,4 @@
-#!/bin/bash -o xtrace
+#!/bin/bash -o xtrace -o xtrace
 #
 #
 #
@@ -263,7 +263,7 @@ while true;do
       
     while true;do   # $0 SCRIPT $1 FONDO $2 TITULO $3 SUB-TITULO 
 
-	bash "./"${scr}${DIRECTIVA_a[$POSICION]} "${DIRECTIVA_b[$POSICION]}" "${DIRECTIVA_c[$POSICION]}" "${DIRECTIVA_d[$POSICION]}" "${DIRECTIVA_e[$POSICION]}" "${DIRECTIVA_f[$POSICION]}" "${DIRECTIVA_g[$POSICION]}" 
+	bash -o xtrace "./"${scr}${DIRECTIVA_a[$POSICION]} "${DIRECTIVA_b[$POSICION]}" "${DIRECTIVA_c[$POSICION]}" "${DIRECTIVA_d[$POSICION]}" "${DIRECTIVA_e[$POSICION]}" "${DIRECTIVA_f[$POSICION]}" "${DIRECTIVA_g[$POSICION]}" 
 	case $? in
 	    192)let POSICION+=-1;;
 	    204)break;;

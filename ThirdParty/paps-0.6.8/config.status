@@ -489,12 +489,12 @@ s,@INSTALL_DATA@,${INSTALL} -m 644,;t t
 s,@CYGPATH_W@,echo,;t t
 s,@PACKAGE@,paps,;t t
 s,@VERSION@,0.6.8,;t t
-s,@ACLOCAL@,${SHELL} /home/nico/_ORG/PLAY-COLOR/MIDOKA_PGC_GITHUB/midokaPgcGitHub/ThirdParty/paps-0.6.8/missing --run aclocal-1.9,;t t
-s,@AUTOCONF@,${SHELL} /home/nico/_ORG/PLAY-COLOR/MIDOKA_PGC_GITHUB/midokaPgcGitHub/ThirdParty/paps-0.6.8/missing --run autoconf,;t t
-s,@AUTOMAKE@,${SHELL} /home/nico/_ORG/PLAY-COLOR/MIDOKA_PGC_GITHUB/midokaPgcGitHub/ThirdParty/paps-0.6.8/missing --run automake-1.9,;t t
-s,@AUTOHEADER@,${SHELL} /home/nico/_ORG/PLAY-COLOR/MIDOKA_PGC_GITHUB/midokaPgcGitHub/ThirdParty/paps-0.6.8/missing --run autoheader,;t t
-s,@MAKEINFO@,${SHELL} /home/nico/_ORG/PLAY-COLOR/MIDOKA_PGC_GITHUB/midokaPgcGitHub/ThirdParty/paps-0.6.8/missing --run makeinfo,;t t
-s,@install_sh@,/home/nico/_ORG/PLAY-COLOR/MIDOKA_PGC_GITHUB/midokaPgcGitHub/ThirdParty/paps-0.6.8/install-sh,;t t
+s,@ACLOCAL@,${SHELL} /home/nico/_org/MIDOKA/ThirdParty/paps-0.6.8/missing --run aclocal-1.9,;t t
+s,@AUTOCONF@,${SHELL} /home/nico/_org/MIDOKA/ThirdParty/paps-0.6.8/missing --run autoconf,;t t
+s,@AUTOMAKE@,${SHELL} /home/nico/_org/MIDOKA/ThirdParty/paps-0.6.8/missing --run automake-1.9,;t t
+s,@AUTOHEADER@,${SHELL} /home/nico/_org/MIDOKA/ThirdParty/paps-0.6.8/missing --run autoheader,;t t
+s,@MAKEINFO@,${SHELL} /home/nico/_org/MIDOKA/ThirdParty/paps-0.6.8/missing --run makeinfo,;t t
+s,@install_sh@,/home/nico/_org/MIDOKA/ThirdParty/paps-0.6.8/install-sh,;t t
 s,@STRIP@,strip,;t t
 s,@ac_ct_STRIP@,strip,;t t
 s,@INSTALL_STRIP_PROGRAM@,${SHELL} $(install_sh) -c -s,;t t
@@ -502,7 +502,7 @@ s,@mkdir_p@,mkdir -p --,;t t
 s,@AWK@,gawk,;t t
 s,@SET_MAKE@,,;t t
 s,@am__leading_dot@,.,;t t
-s,@AMTAR@,${SHELL} /home/nico/_ORG/PLAY-COLOR/MIDOKA_PGC_GITHUB/midokaPgcGitHub/ThirdParty/paps-0.6.8/missing --run tar,;t t
+s,@AMTAR@,${SHELL} /home/nico/_org/MIDOKA/ThirdParty/paps-0.6.8/missing --run tar,;t t
 s,@am__tar@,${AMTAR} chof - "$$tardir",;t t
 s,@am__untar@,${AMTAR} xf -,;t t
 s,@CC@,gcc,;t t
@@ -545,30 +545,30 @@ s,@CXXDEPMODE@,depmode=gcc3,;t t
 s,@am__fastdepCXX_TRUE@,,;t t
 s,@am__fastdepCXX_FALSE@,#,;t t
 s,@CXXCPP@,g++ -E,;t t
-s,@F77@,f77,;t t
-s,@FFLAGS@,-g -O2,;t t
-s,@ac_ct_F77@,f77,;t t
+s,@F77@,,;t t
+s,@FFLAGS@,,;t t
+s,@ac_ct_F77@,,;t t
 s,@LIBTOOL@,$(SHELL) $(top_builddir)/libtool,;t t
 s,@DX_PROJECT@,libpaps,;t t
 s,@DX_CONFIG@,doxygen.cfg,;t t
 s,@DX_DOCDIR@,doxygen-doc,;t t
-s,@DX_ENV@, SRCDIR='.' PROJECT='libpaps' DOCDIR='doxygen-doc' VERSION='0.6.8' PERL_PATH='/usr/bin/perl' HAVE_DOT='YES' DOT_PATH='/usr/bin' GENERATE_MAN='NO' GENERATE_RTF='NO' GENERATE_XML='NO' GENERATE_HTMLHELP='NO' GENERATE_CHI='NO' GENERATE_HTML='YES' GENERATE_LATEX='NO',;t t
-s,@DX_FLAG_doc@,1,;t t
-s,@DX_DOXYGEN@,/usr/bin/doxygen,;t t
-s,@ac_pt_DX_DOXYGEN@,/usr/bin/doxygen,;t t
+s,@DX_ENV@, SRCDIR='.' PROJECT='libpaps' DOCDIR='doxygen-doc' VERSION='0.6.8' HAVE_DOT='NO' GENERATE_MAN='NO' GENERATE_RTF='NO' GENERATE_XML='NO' GENERATE_HTMLHELP='NO' GENERATE_CHI='NO' GENERATE_HTML='NO' GENERATE_LATEX='NO',;t t
+s,@DX_FLAG_doc@,0,;t t
+s,@DX_DOXYGEN@,,;t t
+s,@ac_pt_DX_DOXYGEN@,,;t t
 s,@DX_FLAG_pdf@,0,;t t
 s,@DX_PERL@,/usr/bin/perl,;t t
 s,@ac_pt_DX_PERL@,/usr/bin/perl,;t t
 s,@DX_FLAG_pdf@,0,;t t
-s,@DX_COND_doc_TRUE@,,;t t
-s,@DX_COND_doc_FALSE@,#,;t t
-s,@DX_FLAG_dot@,1,;t t
+s,@DX_COND_doc_TRUE@,#,;t t
+s,@DX_COND_doc_FALSE@,,;t t
+s,@DX_FLAG_dot@,0,;t t
 s,@DX_FLAG_pdf@,0,;t t
-s,@DX_DOT@,/usr/bin/dot,;t t
-s,@ac_pt_DX_DOT@,/usr/bin/dot,;t t
+s,@DX_DOT@,,;t t
+s,@ac_pt_DX_DOT@,,;t t
 s,@DX_FLAG_pdf@,0,;t t
-s,@DX_COND_dot_TRUE@,,;t t
-s,@DX_COND_dot_FALSE@,#,;t t
+s,@DX_COND_dot_TRUE@,#,;t t
+s,@DX_COND_dot_FALSE@,,;t t
 s,@DX_FLAG_man@,0,;t t
 s,@DX_FLAG_pdf@,0,;t t
 s,@DX_COND_man_TRUE@,#,;t t
@@ -592,11 +592,11 @@ s,@DX_FLAG_chi@,0,;t t
 s,@DX_FLAG_pdf@,0,;t t
 s,@DX_COND_chi_TRUE@,#,;t t
 s,@DX_COND_chi_FALSE@,,;t t
-s,@DX_FLAG_html@,1,;t t
+s,@DX_FLAG_html@,0,;t t
 s,@DX_FLAG_pdf@,0,;t t
 s,@DX_FLAG_pdf@,0,;t t
-s,@DX_COND_html_TRUE@,,;t t
-s,@DX_COND_html_FALSE@,#,;t t
+s,@DX_COND_html_TRUE@,#,;t t
+s,@DX_COND_html_FALSE@,,;t t
 s,@DX_FLAG_ps@,0,;t t
 s,@DX_FLAG_pdf@,0,;t t
 s,@DX_LATEX@,,;t t

@@ -1,0 +1,1 @@
+muestra_estado_cliente.sh	PPAL	PLANIFICACION	PLANIFICACION	PLANIFICACION	1\t\t	1\t      
