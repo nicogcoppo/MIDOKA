@@ -1,1 +1,0 @@
-visualiza_cli.sh	PPAL	CLIENTE	PLANIFICACION	PLANIFICACION	1\t\t	1\t      

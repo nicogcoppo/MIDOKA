@@ -1,1 +1,0 @@
-cierre_comisiones_efectivas.sh	PPAL	CONTABILIDAD	VISUALIZAR	COMISIONES	1	255
