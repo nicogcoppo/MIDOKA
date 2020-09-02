@@ -17,6 +17,10 @@ resultados=$RANDOM
 
 costos=$RANDOM
 
+comisiones=$RANDOM
+
+movimientos=$RANDOM
+
 ############## SCRIPT #################################
 
 echo -e "\nPASSWORD... " 
@@ -43,6 +47,25 @@ mysql -u "${user}" --password="${pass}" </tmp/detalleCostos.sql | tail -n +2 | t
 
 cp /tmp/${costos} ./detalleCostos_$RANDOM.csv
 
+###--- DETALLE COMISIONES -- ###
+
+cat ./scripts/scriptSql/detalleComisiones.sql | sed "s/Linf/${Linf}/g" | sed "s/Lsup/${Lsup}/g" >/tmp/detalleComisiones.sql
+
+test -f "/tmp/${comisiones}" || mysql -u "${user}" --password="${pass}" </tmp/detalleComisiones.sql | head -1 | tr '\t' ';' > /tmp/${comisiones}  # Encabezado
+
+mysql -u "${user}" --password="${pass}" </tmp/detalleComisiones.sql | tail -n +2 | tr '\t' ';' | tr '.' ',' >> /tmp/${comisiones}
+
+cp /tmp/${comisiones} ./detalleComisiones_$RANDOM.csv
+
+###--- DETALLE MOVIMIENTOS STOCK -- ###
+
+cat ./scripts/scriptSql/detalleMovimientoStock.sql | sed "s/Linf/${Linf}/g" | sed "s/Lsup/${Lsup}/g" >/tmp/detalleMovimientoStock.sql
+
+test -f "/tmp/${movimientos}" || mysql -u "${user}" --password="${pass}" </tmp/detalleMovimientoStock.sql | head -1 | tr '\t' ';' > /tmp/${movimientos}  # Encabezado
+
+mysql -u "${user}" --password="${pass}" </tmp/detalleMovimientoStock.sql | tail -n +2 | tr '\t' ';' | tr '.' ',' >> /tmp/${movimientos}
+
+cp /tmp/${movimientos} ./detalleMovimientoStock_$RANDOM.csv
 
 
 ############## MANTENIMIENTO #############
