@@ -17,7 +17,9 @@ function correo {
 
     #mail -s "ERROR TRANSACCION:"${user}"-"${DIA}"-"${RANDOM}".sql" nico@midoka.com.ar || mail -s "ERROR TRANSACCION:"${user}"-"${DIA}"-"${RANDOM}".sql" nico@B590DEBIAN871
 
-    echo "no operativa"
+    cp ${SCRIPT_FINAL} ./${sql}/transaccionesFallidas/
+    
+    
 }
 
    

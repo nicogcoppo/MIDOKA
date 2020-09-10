@@ -566,12 +566,9 @@ NETO="$(cat ${temp}"temp2.cont" | grep BRUTO | awk '{print $NF}')"
 rm ${temp}"log_errores_nov.cont"
 
 
-mysql -u "${user}" --password="${pass}" --execute="INSERT INTO "${DB}".CUENTA_CORRIENTE (OPERACION_REF_CC,DEBE,HABER,DEVOLUCION,PERDIDAS) VALUES ("${OPERACION}",'0','0',"${NETO}",'0');" >>${PREOPER}
-
+echo "INSERT INTO "${DB}".CUENTA_CORRIENTE (OPERACION_REF_CC,DEBE,HABER,DEVOLUCION,PERDIDAS) VALUES ("${OPERACION}",'0','0',"${NETO}",'0');" >>${PREOPER}
 
 mysql -u "${user}" --password="${pass}" --execute="SELECT artID,CANTIDAD_RE FROM "${DB}".RECEPCION_CONTABILIDAD JOIN("${DB}".ARTICULOS,"${DB}".PRECIOS,"${DB}".CATEGORIA,"${DB}".MODELO,"${DB}".MOTIVO) ON("${DB}".PRECIOS.RUBRO_pr="${DB}".ARTICULOS.RUBRO AND "${DB}".PRECIOS.CATEGORIA_pr="${DB}".ARTICULOS.CATEGORIA AND "${DB}".PRECIOS.MODELO_pr="${DB}".ARTICULOS.MODELO AND "${DB}".CATEGORIA.claID="${DB}".ARTICULOS.CATEGORIA AND "${DB}".MOTIVO.mtID="${DB}".ARTICULOS.MOTIVO AND "${DB}".MODELO.mdID="${DB}".ARTICULOS.MODELO AND "${DB}".ARTICULOS.artID="${DB}".RECEPCION_CONTABILIDAD.ID_ARTICULO_RE);" 2>${temp}"log_errores_nov.cont" | tail -n +2 | tr '\t' ',' >${temp}"tmp5.cont"
-
-
 
 while read line; do
    echo "INSERT INTO "${DB}".ARMADO (ID_ARTICULO_AR,CANTIDAD_ING,OPERACION_REFERENCIA_AR) VALUES("${line}","${OPERACION}");">>${PREOPER}
