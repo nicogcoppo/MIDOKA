@@ -38,7 +38,7 @@ declare TIPO_RECURSO
 function busqueda_novedad {
 
     
-    mysql -u "${user}" --password="${pass}" --execute="SELECT scID,DENOMINACION,tipo_oop,DATE_FORMAT(COMIENZO,'%d %b %Y') FROM "${DB}".SOLICITUDES JOIN ("${DB}".CLIENTE,"${DB}".ORDEN_OPERACION,"${DB}".OPERACIONES) ON ("${DB}".CLIENTE.clID="${DB}".OPERACIONES.INTERESADO AND "${DB}".OPERACIONES.opID="${DB}".SOLICITUDES.REFERENCIA AND "${DB}".ORDEN_OPERACION.oopID="${DB}".SOLICITUDES.CLASE) WHERE ASIGNADA='5' AND REALIZACION IS NULL AND COMIENZO IS NOT NULL ORDER BY tipo_oop,COMIENZO ASC ;" | tail -n +2 | column -t -s $'\t'>${temp}"tmp2.ed"
+    mysql -u "${user}" --password="${pass}" --execute="SELECT scID,DENOMINACION,tipo_oop,DATE_FORMAT(COMIENZO,'%d %b %Y') FROM "${DB}".SOLICITUDES JOIN ("${DB}".CLIENTE,"${DB}".ORDEN_OPERACION,"${DB}".OPERACIONES) ON ("${DB}".CLIENTE.clID="${DB}".OPERACIONES.INTERESADO AND "${DB}".OPERACIONES.opID="${DB}".SOLICITUDES.REFERENCIA AND "${DB}".ORDEN_OPERACION.oopID="${DB}".SOLICITUDES.CLASE) WHERE ASIGNADA='5' AND REALIZACION IS NULL AND COMIENZO IS NOT NULL ORDER BY tipo_oop,COMIENZO,DENOMINACION ASC ;" | tail -n +2 | column -t -s $'\t'>${temp}"tmp2.ed"
 
     
     cat "./"${temp}"/tmp2.ed" | awk '{print $1}' >"./"${temp}"/tmp3.ed"
